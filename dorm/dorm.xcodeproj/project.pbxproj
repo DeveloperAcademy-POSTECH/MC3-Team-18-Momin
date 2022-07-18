@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		007C698D28858A3D0074F653 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C698C28858A3D0074F653 /* Student.swift */; };
 		00F2D835288049DE00BE4176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2D834288049DE00BE4176 /* AppDelegate.swift */; };
 		00F2D837288049DE00BE4176 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2D836288049DE00BE4176 /* SceneDelegate.swift */; };
 		00F2D83C288049DE00BE4176 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F2D83A288049DE00BE4176 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		007C698C28858A3D0074F653 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		00F2D831288049DE00BE4176 /* dorm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dorm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F2D834288049DE00BE4176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00F2D836288049DE00BE4176 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		007C698B28858A260074F653 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				007C698C28858A3D0074F653 /* Student.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		00F2D828288049DE00BE4176 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +79,7 @@
 		00FA1BB8288504090087929B /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				007C698B28858A260074F653 /* Model */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -184,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00F2D835288049DE00BE4176 /* AppDelegate.swift in Sources */,
+				007C698D28858A3D0074F653 /* Student.swift in Sources */,
 				00F2D837288049DE00BE4176 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
