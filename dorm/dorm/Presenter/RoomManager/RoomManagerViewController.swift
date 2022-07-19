@@ -17,6 +17,7 @@ final class RoomManagerViewController: UIViewController {
     }
 
     override func loadView() {
+        super.loadView()
         view = roomManagerView
     }
 }
