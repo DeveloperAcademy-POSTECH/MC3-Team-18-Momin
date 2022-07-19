@@ -11,7 +11,7 @@ struct Student: Codable {
     let name: String // 학생 이름
     let nickname: String? // 학생 닉네임
     let roomNumber: Int // 거주하는 방 호수
-    let state: Int //현재 거주 상태
+    let state: Int // 현재 거주 상태
 
     /// Student initializer
     /// - Parameters:
