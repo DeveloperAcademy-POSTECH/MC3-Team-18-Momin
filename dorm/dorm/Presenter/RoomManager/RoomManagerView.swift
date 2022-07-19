@@ -12,12 +12,12 @@ final class RoomManagerView: UIView {
     // MARK: - class Life cycle
     init() {
         super.init(frame: .zero)
-        commomInit()
+        setUpViews()
     }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        commomInit()
+        setUpViews()
     }
 
     required init?(coder: NSCoder) {
@@ -25,7 +25,7 @@ final class RoomManagerView: UIView {
     }
 
     /// UI 요소를 추가하는 함수
-    private func commomInit() {
+    private func setUpViews() {
 
     }
     
