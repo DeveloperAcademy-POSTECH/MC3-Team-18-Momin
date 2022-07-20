@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		002789C02886496E00BDCDA4 /* UIKitPreviewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002789BF2886496E00BDCDA4 /* UIKitPreviewExtension.swift */; };
 		002789BC288641CA00BDCDA4 /* RoomManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002789BB288641CA00BDCDA4 /* RoomManagerViewController.swift */; };
 		002789BE2886449A00BDCDA4 /* RoomManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002789BD2886449A00BDCDA4 /* RoomManagerView.swift */; };
+		002789C02886496E00BDCDA4 /* UIKitPreviewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002789BF2886496E00BDCDA4 /* UIKitPreviewExtension.swift */; };
 		007C698D28858A3D0074F653 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C698C28858A3D0074F653 /* Student.swift */; };
 		007C698F28858C210074F653 /* DormRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C698E28858C210074F653 /* DormRoom.swift */; };
 		00F2D835288049DE00BE4176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2D834288049DE00BE4176 /* AppDelegate.swift */; };
@@ -18,12 +18,13 @@
 		00F2D83E288049E000BE4176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F2D83D288049E000BE4176 /* Assets.xcassets */; };
 		00F2D841288049E000BE4176 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F2D83F288049E000BE4176 /* LaunchScreen.storyboard */; };
 		00FA1BC1288522D90087929B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 00FA1BC0288522D90087929B /* .swiftlint.yml */; };
+		2A0388BD28878BD800B5DAD5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0388BC28878BD800B5DAD5 /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		002789BF2886496E00BDCDA4 /* UIKitPreviewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitPreviewExtension.swift; sourceTree = "<group>"; };
 		002789BB288641CA00BDCDA4 /* RoomManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomManagerViewController.swift; sourceTree = "<group>"; };
 		002789BD2886449A00BDCDA4 /* RoomManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomManagerView.swift; sourceTree = "<group>"; };
+		002789BF2886496E00BDCDA4 /* UIKitPreviewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitPreviewExtension.swift; sourceTree = "<group>"; };
 		007C698C28858A3D0074F653 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		007C698E28858C210074F653 /* DormRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DormRoom.swift; sourceTree = "<group>"; };
 		00F2D831288049DE00BE4176 /* dorm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dorm.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +35,7 @@
 		00F2D840288049E000BE4176 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00F2D842288049E000BE4176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00FA1BC0288522D90087929B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		2A0388BC28878BD800B5DAD5 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				002789BF2886496E00BDCDA4 /* UIKitPreviewExtension.swift */,
+				2A0388BC28878BD800B5DAD5 /* ColorExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				007C698F28858C210074F653 /* DormRoom.swift in Sources */,
 				002789BE2886449A00BDCDA4 /* RoomManagerView.swift in Sources */,
 				00F2D835288049DE00BE4176 /* AppDelegate.swift in Sources */,
+				2A0388BD28878BD800B5DAD5 /* ColorExtension.swift in Sources */,
 				007C698D28858A3D0074F653 /* Student.swift in Sources */,
 				002789C02886496E00BDCDA4 /* UIKitPreviewExtension.swift in Sources */,
 				00F2D837288049DE00BE4176 /* SceneDelegate.swift in Sources */,
