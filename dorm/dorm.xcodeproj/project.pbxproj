@@ -12,6 +12,7 @@
 		002789C02886496E00BDCDA4 /* UIKitPreviewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002789BF2886496E00BDCDA4 /* UIKitPreviewExtension.swift */; };
 		007C698D28858A3D0074F653 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C698C28858A3D0074F653 /* Student.swift */; };
 		007C698F28858C210074F653 /* DormRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C698E28858C210074F653 /* DormRoom.swift */; };
+		008A5F542887A372006B202C /* ScreenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008A5F532887A372006B202C /* ScreenState.swift */; };
 		00F2D835288049DE00BE4176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2D834288049DE00BE4176 /* AppDelegate.swift */; };
 		00F2D837288049DE00BE4176 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2D836288049DE00BE4176 /* SceneDelegate.swift */; };
 		00F2D83C288049DE00BE4176 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F2D83A288049DE00BE4176 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		002789BF2886496E00BDCDA4 /* UIKitPreviewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitPreviewExtension.swift; sourceTree = "<group>"; };
 		007C698C28858A3D0074F653 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		007C698E28858C210074F653 /* DormRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DormRoom.swift; sourceTree = "<group>"; };
+		008A5F532887A372006B202C /* ScreenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenState.swift; sourceTree = "<group>"; };
 		00F2D831288049DE00BE4176 /* dorm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dorm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F2D834288049DE00BE4176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00F2D836288049DE00BE4176 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				00F789E328878E5F001D5AF8 /* CustomSplitViewController.swift */,
+				008A5F532887A372006B202C /* ScreenState.swift */,
 			);
 			path = SplitView;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				007C698D28858A3D0074F653 /* Student.swift in Sources */,
 				002789C02886496E00BDCDA4 /* UIKitPreviewExtension.swift in Sources */,
 				00F2D837288049DE00BE4176 /* SceneDelegate.swift in Sources */,
+				008A5F542887A372006B202C /* ScreenState.swift in Sources */,
 				002789BC288641CA00BDCDA4 /* RoomManagerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
