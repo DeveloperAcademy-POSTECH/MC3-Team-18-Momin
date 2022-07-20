@@ -60,32 +60,45 @@ final class SeparatedRoomView: UIView {
         setUpViews()
     }
 
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        setUpViews()
-//    }
-
     required init?(coder: NSCoder) {
         fatalError("Don't need coder initializer")
     }
 
     private func setUpViews() {
         self.backgroundColor = .gray
+        setUpRoomNumberLabel()
+        setUpStudentInfo()
+        setUpScrollView()
+    }
+}
 
+private extension SeparatedRoomView {
+    func setUpRoomNumberLabel() {
         addSubview(roomNumberLabel)
         roomNumberLabel.translatesAutoresizingMaskIntoConstraints = false
-        roomNumberLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
-        roomNumberLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 20).isActive = true
+        NSLayoutConstraint.activate([
+            roomNumberLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20), roomNumberLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 20)
+        ])
+    }
+
+    func setUpStudentInfo() {
         addSubview(studentInfo)
         studentInfo.translatesAutoresizingMaskIntoConstraints = false
-        studentInfo.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
-        studentInfo.topAnchor.constraint(equalTo: roomNumberLabel.bottomAnchor, constant: 20).isActive = true
+        NSLayoutConstraint.activate([
+            studentInfo.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20),
+            studentInfo.topAnchor.constraint(equalTo: roomNumberLabel.bottomAnchor, constant: 20)
+        ])
+    }
+
+    func setUpScrollView() {
         addSubview(detailScrollView)
         detailScrollView.translatesAutoresizingMaskIntoConstraints = false
-        detailScrollView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
-        detailScrollView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20).isActive = true
-        detailScrollView.topAnchor.constraint(equalTo: studentInfo.bottomAnchor, constant: 20).isActive = true
-        detailScrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20).isActive = true
+        NSLayoutConstraint.activate([
+            detailScrollView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20),
+            detailScrollView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20),
+            detailScrollView.topAnchor.constraint(equalTo: studentInfo.bottomAnchor, constant: 20),
+            detailScrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20)
+        ])
     }
 }
 

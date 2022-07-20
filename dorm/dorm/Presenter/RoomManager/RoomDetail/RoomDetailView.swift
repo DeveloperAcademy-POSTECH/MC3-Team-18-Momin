@@ -51,16 +51,20 @@ final class RoomDetailView: UIView {
         // 화면 확장 버튼
         addSubview(expandButton)
         expandButton.translatesAutoresizingMaskIntoConstraints = false
-        expandButton.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        expandButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 30).isActive = true
+        NSLayoutConstraint.activate([
+            expandButton.topAnchor.constraint(equalTo: self.topAnchor),
+            expandButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 30)
+        ])
 
         // 스택 뷰
         addSubview(roomDetailStackView)
         roomDetailStackView.translatesAutoresizingMaskIntoConstraints = false
-        roomDetailStackView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10).isActive = true
-        roomDetailStackView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10).isActive = true
-        roomDetailStackView.topAnchor.constraint(equalTo: expandButton.bottomAnchor, constant: 10).isActive = true
-        roomDetailStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
+        NSLayoutConstraint.activate([
+            roomDetailStackView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10),
+            roomDetailStackView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10),
+            roomDetailStackView.topAnchor.constraint(equalTo: expandButton.bottomAnchor, constant: 10),
+            roomDetailStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10)
+        ])
     }
 }
 
