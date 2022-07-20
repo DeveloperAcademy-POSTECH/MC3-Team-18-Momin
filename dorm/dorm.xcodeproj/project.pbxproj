@@ -17,6 +17,7 @@
 		00F2D83C288049DE00BE4176 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F2D83A288049DE00BE4176 /* Main.storyboard */; };
 		00F2D83E288049E000BE4176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F2D83D288049E000BE4176 /* Assets.xcassets */; };
 		00F2D841288049E000BE4176 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F2D83F288049E000BE4176 /* LaunchScreen.storyboard */; };
+		00F789E428878E5F001D5AF8 /* CustomSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F789E328878E5F001D5AF8 /* CustomSplitViewController.swift */; };
 		00FA1BC1288522D90087929B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 00FA1BC0288522D90087929B /* .swiftlint.yml */; };
 		2A0388BD28878BD800B5DAD5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0388BC28878BD800B5DAD5 /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		00F2D83D288049E000BE4176 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00F2D840288049E000BE4176 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00F2D842288049E000BE4176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00F789E328878E5F001D5AF8 /* CustomSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSplitViewController.swift; sourceTree = "<group>"; };
 		00FA1BC0288522D90087929B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		2A0388BC28878BD800B5DAD5 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +101,14 @@
 			path = dorm;
 			sourceTree = "<group>";
 		};
+		00F789E228878E51001D5AF8 /* SplitView */ = {
+			isa = PBXGroup;
+			children = (
+				00F789E328878E5F001D5AF8 /* CustomSplitViewController.swift */,
+			);
+			path = SplitView;
+			sourceTree = "<group>";
+		};
 		00FA1BB8288504090087929B /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +120,7 @@
 		00FA1BB92885040D0087929B /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				00F789E228878E51001D5AF8 /* SplitView */,
 				002789BA288641BC00BDCDA4 /* RoomManager */,
 			);
 			path = Presenter;
@@ -243,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00F789E428878E5F001D5AF8 /* CustomSplitViewController.swift in Sources */,
 				007C698F28858C210074F653 /* DormRoom.swift in Sources */,
 				002789BE2886449A00BDCDA4 /* RoomManagerView.swift in Sources */,
 				00F2D835288049DE00BE4176 /* AppDelegate.swift in Sources */,
