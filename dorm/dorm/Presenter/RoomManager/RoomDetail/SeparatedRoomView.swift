@@ -8,21 +8,8 @@
 import UIKit
 
 final class SeparatedRoomView: UIView {
-    enum RoomState: Int {
-        case pending
-        case living
 
-        var stateIcon: String {
-            switch self {
-            case .pending:
-                return "person"
-            case .living:
-                return "person.fill"
-            }
-        }
-    }
-
-    private var studentState = [RoomState.pending, RoomState.living]
+    private var studentState = ["person", "person.fill"]
 
     private var student: Student
 
@@ -35,7 +22,7 @@ final class SeparatedRoomView: UIView {
 
     lazy var studentInfo: UIStackView = {
         let config = UIImage.SymbolConfiguration(textStyle: .headline)
-        let image = UIImage(systemName: studentState[student.state].stateIcon, withConfiguration: config)
+        let image = UIImage(systemName: studentState[student.state], withConfiguration: config)
         let iconImage = UIImageView(image: image)
         iconImage.tintColor = .black
         iconImage.contentMode = .scaleAspectFit
