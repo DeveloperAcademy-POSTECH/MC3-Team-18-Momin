@@ -16,6 +16,9 @@
 		00E327E8288FCAFE0097C22D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 00E327E7288FCAFE0097C22D /* FirebaseAuth */; };
 		00E327EA288FCAFE0097C22D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 00E327E9288FCAFE0097C22D /* FirebaseFirestoreSwift */; };
 		00E327EC288FCBC80097C22D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00E327EB288FCBC80097C22D /* GoogleService-Info.plist */; };
+		008A5F5B2887FFAB006B202C /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008A5F592887FFAB006B202C /* SidebarViewController.swift */; };
+		008A5F5C2887FFAB006B202C /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008A5F5A2887FFAB006B202C /* Sidebar.swift */; };
+		008A5F5E288808F1006B202C /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008A5F5D288808F1006B202C /* MenuCell.swift */; };
 		00F2D835288049DE00BE4176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2D834288049DE00BE4176 /* AppDelegate.swift */; };
 		00F2D837288049DE00BE4176 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2D836288049DE00BE4176 /* SceneDelegate.swift */; };
 		00F2D83C288049DE00BE4176 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F2D83A288049DE00BE4176 /* Main.storyboard */; };
@@ -36,6 +39,9 @@
 		007C698E28858C210074F653 /* DormRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DormRoom.swift; sourceTree = "<group>"; };
 		008A5F532887A372006B202C /* ScreenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenState.swift; sourceTree = "<group>"; };
 		00E327EB288FCBC80097C22D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		008A5F592887FFAB006B202C /* SidebarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
+		008A5F5A2887FFAB006B202C /* Sidebar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
+		008A5F5D288808F1006B202C /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		00F2D831288049DE00BE4176 /* dorm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dorm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F2D834288049DE00BE4176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00F2D836288049DE00BE4176 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +87,17 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		008A5F582887FFAB006B202C /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				008A5F532887A372006B202C /* ScreenState.swift */,
+				008A5F592887FFAB006B202C /* SidebarViewController.swift */,
+				008A5F5A2887FFAB006B202C /* Sidebar.swift */,
+				008A5F5D288808F1006B202C /* MenuCell.swift */,
+			);
+			path = Sidebar;
+			sourceTree = "<group>";
+		};
 		00F2D828288049DE00BE4176 = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				00F789E328878E5F001D5AF8 /* CustomSplitViewController.swift */,
-				008A5F532887A372006B202C /* ScreenState.swift */,
 			);
 			path = SplitView;
 			sourceTree = "<group>";
@@ -134,6 +150,7 @@
 		00FA1BB92885040D0087929B /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				008A5F582887FFAB006B202C /* Sidebar */,
 				00F789E228878E51001D5AF8 /* SplitView */,
 				002789BA288641BC00BDCDA4 /* RoomManager */,
 				2A0388B928863EDC00B5DAD5 /* DocumentPickerView */,
@@ -294,10 +311,13 @@
 				007C698D28858A3D0074F653 /* Student.swift in Sources */,
 				C9F39AC42887935500CD0F3F /* MockDatas.swift in Sources */,
 				002789C02886496E00BDCDA4 /* UIKitPreviewExtension.swift in Sources */,
+				008A5F5E288808F1006B202C /* MenuCell.swift in Sources */,
 				00F2D837288049DE00BE4176 /* SceneDelegate.swift in Sources */,
 				008A5F542887A372006B202C /* ScreenState.swift in Sources */,
 				002789BC288641CA00BDCDA4 /* RoomManagerViewController.swift in Sources */,
 				2A0388BB28863EF300B5DAD5 /* DocumentPickerViewController.swift in Sources */,
+				008A5F5C2887FFAB006B202C /* Sidebar.swift in Sources */,
+				008A5F5B2887FFAB006B202C /* SidebarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,11 +467,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 44RS35G3C5;
+				DEVELOPMENT_TEAM = 44RS35G3C5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = dorm/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -488,6 +510,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
