@@ -5,21 +5,20 @@
 //  Created by JongHo Park on 2022/07/20.
 //
 
-import Combine
 import UIKit
 
-class CustomSplitViewController: UISplitViewController {
+final class CustomSplitViewController: UISplitViewController {
 
     // MARK: - Properties
-    // TODO: Side bar ViewContoller 만들고 primary 영역에 설정해야함!
-    private lazy var sideBarViewController: UIViewController = RoomManagerViewController()
-    private lazy var roomManagerViewController: UIViewController = RoomManagerViewController()
-    private let screenState: ScreenStateManager = ScreenStateManager()
-    private var cancelBag: Set<AnyCancellable> = []
+    private lazy var sideBarViewController: SidebarViewController = SidebarViewController()
+    // 현재 보여지는 viewController 를 나타냄 -> 중복 교체 방지
+    private var currentViewController: UIViewController?
+
     // MARK: - class Lifecycle
     override init(style: UISplitViewController.Style = .doubleColumn) {
         super.init(style: style)
         setUpViewControllers()
+        setUpDelegate()
     }
 
     required init?(coder: NSCoder) {
@@ -39,35 +38,32 @@ private extension CustomSplitViewController {
     /// Primary ViewController 와 SecondViewController 를 설정하는 함수
     func setUpViewControllers() {
         setViewController(sideBarViewController, for: .primary)
-        setViewController(roomManagerViewController, for: .secondary)
     }
+
+    func setUpDelegate() {
+        sideBarViewController.delegate = self
+    }
+
 }
 
-// MARK: - bind state data
-private extension CustomSplitViewController {
+// MARK: - conform Sidebar Delegate 
+extension CustomSplitViewController: SidebarDelegate {
 
-    /// Screen State 를 bind 하는 함수
-    func bindScreenState() {
-        screenState.$currentScreenState
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] state in
-                guard let self = self else { return }
-                switch state {
-                case .roomManage:
-                    self.changeSecondaryViewController(self.roomManagerViewController)
-                }
-            }
-            .store(in: &cancelBag)
+    func showDetailViewController(_ viewController: UIViewController) {
+        guard currentViewController != viewController else { return }
+
+        currentViewController = viewController
+
+        guard viewControllers.count == 2, let navigationController = viewControllers.last as? UINavigationController else {
+            setViewController(currentViewController, for: .secondary)
+            return
+        }
+        navigationController.viewControllers = [viewController]
     }
+
 }
 
-// MARK: - View Controller Manage
-private extension CustomSplitViewController {
-    func changeSecondaryViewController(_ viewController: UIViewController) {
-        showDetailViewController(viewController, sender: self)
-    }
-}
-
+// MARK: - Preview
 #if DEBUG
 import SwiftUI
 struct CustomSplitViewControllerPreview: PreviewProvider {
