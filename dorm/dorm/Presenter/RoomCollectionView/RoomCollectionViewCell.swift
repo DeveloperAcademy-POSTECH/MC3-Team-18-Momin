@@ -28,7 +28,6 @@ class RoomCollectionViewCell: UICollectionViewCell {
 
     private let roomNumberLabel: UILabel = {
         let label = UILabel()
-        label.text = "101"
         label.textAlignment = .left
         label.textColor = .black
         label.font = label.font.withSize(20)
@@ -49,7 +48,6 @@ class RoomCollectionViewCell: UICollectionViewCell {
 
     private let leftPersonImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "person")
         imageView.tintColor = .postechRed
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -58,7 +56,6 @@ class RoomCollectionViewCell: UICollectionViewCell {
 
     private let rightPersonImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "person")
         imageView.tintColor = .postechRed
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -68,7 +65,6 @@ class RoomCollectionViewCell: UICollectionViewCell {
     private let leftPersonNameLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
-        label.text = "Min"
         label.textColor = .postechRed
         label.font = label.font.withSize(16)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -78,10 +74,24 @@ class RoomCollectionViewCell: UICollectionViewCell {
     private let rightPersonNameLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
-        label.text = "Min"
         label.textColor = .postechRed
         label.font = label.font.withSize(16)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+
+    func configureRoomStudents(students: [Student]) {
+        leftPersonNameLabel.text = students[0].name
+        rightPersonNameLabel.text = students[1].name
+
+        let sizeConfig = UIImage.SymbolConfiguration(pointSize: 25)
+        let weightConfig = UIImage.SymbolConfiguration(weight: .light)
+        let combined = sizeConfig.applying(weightConfig)
+        leftPersonImageView.image = UIImage(systemName: "person", withConfiguration: combined)
+        rightPersonImageView.image = UIImage(systemName: "person", withConfiguration: combined)
+    }
+
+    func configureDormRoomNumber(dormRooms: [DormRoom]) {
+        roomNumberLabel.text = String(dormRooms[0].roomNumber)
+    }
 }
