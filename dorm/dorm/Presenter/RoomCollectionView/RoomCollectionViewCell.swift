@@ -50,6 +50,7 @@ class RoomCollectionViewCell: UICollectionViewCell {
         label.textAlignment = .left
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 17, weight: .medium)
+        label.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 111, right: 144)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
