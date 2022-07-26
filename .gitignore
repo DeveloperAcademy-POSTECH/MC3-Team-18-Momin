@@ -47,7 +47,7 @@ Packages
 .build/
 xcuserdata
 DerivedData/
-
+Package.resolved
 
 ### Xcode ###
 ## User settings
