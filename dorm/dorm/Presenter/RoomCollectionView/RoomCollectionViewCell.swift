@@ -22,22 +22,29 @@ final class RoomCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(rightPersonNameLabel)
 
         NSLayoutConstraint.activate([
-            roundedRectangleUIView.topAnchor.constraint(equalTo: topAnchor, constant: bounds.height / 4.59),
+            roundedRectangleUIView.topAnchor.constraint(equalTo: topAnchor, constant: 29),
             roundedRectangleUIView.bottomAnchor.constraint(equalTo: bottomAnchor),
             roundedRectangleUIView.leadingAnchor.constraint(equalTo: leadingAnchor),
             roundedRectangleUIView.trailingAnchor.constraint(equalTo: trailingAnchor),
+
             middleLineUIView.topAnchor.constraint(equalTo: roundedRectangleUIView.topAnchor),
             middleLineUIView.bottomAnchor.constraint(equalTo: roundedRectangleUIView.bottomAnchor),
-            middleLineUIView.leadingAnchor.constraint(equalTo: roundedRectangleUIView.centerXAnchor, constant: -0.5),
-            middleLineUIView.trailingAnchor.constraint(equalTo: roundedRectangleUIView.centerXAnchor, constant: 0.5),
+            middleLineUIView.centerXAnchor.constraint(equalTo: roundedRectangleUIView.centerXAnchor),
+            middleLineUIView.widthAnchor.constraint(equalToConstant: 1),
+
             leftPersonImageView.centerXAnchor.constraint(equalTo: roundedRectangleUIView.leadingAnchor, constant: bounds.width / 4),
-            leftPersonImageView.topAnchor.constraint(equalTo: roundedRectangleUIView.topAnchor, constant: bounds.height / 4.32),
+            leftPersonImageView.topAnchor.constraint(equalTo: roundedRectangleUIView.topAnchor, constant: 34),
+            leftPersonImageView.bottomAnchor.constraint(equalTo: roundedRectangleUIView.bottomAnchor, constant: -48),
+
             rightPersonImageView.centerXAnchor.constraint(equalTo: roundedRectangleUIView.trailingAnchor, constant: -(bounds.width / 4)),
-            rightPersonImageView.topAnchor.constraint(equalTo: roundedRectangleUIView.topAnchor, constant: bounds.height / 4.32),
+            rightPersonImageView.topAnchor.constraint(equalTo: roundedRectangleUIView.topAnchor, constant: 34),
+            rightPersonImageView.bottomAnchor.constraint(equalTo: roundedRectangleUIView.bottomAnchor, constant: -48),
+
             leftPersonNameLabel.centerXAnchor.constraint(equalTo: roundedRectangleUIView.leadingAnchor, constant: bounds.width / 4),
-            leftPersonNameLabel.bottomAnchor.constraint(equalTo: roundedRectangleUIView.bottomAnchor, constant: -(bounds.height / 11.56)),
+            leftPersonNameLabel.bottomAnchor.constraint(equalTo: roundedRectangleUIView.bottomAnchor, constant: -9),
+
             rightPersonNameLabel.centerXAnchor.constraint(equalTo: roundedRectangleUIView.trailingAnchor, constant: -(bounds.width / 4)),
-            rightPersonNameLabel.bottomAnchor.constraint(equalTo: roundedRectangleUIView.bottomAnchor, constant: -(bounds.height / 11.56))
+            rightPersonNameLabel.bottomAnchor.constraint(equalTo: roundedRectangleUIView.bottomAnchor, constant: -9)
         ])
     }
 
@@ -49,8 +56,7 @@ final class RoomCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.textAlignment = .left
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 17, weight: .medium)
-        label.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 111, right: 144)
+        label.font = UIFont.systemFont(ofSize: UIFont.systemFontSize, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -67,12 +73,8 @@ final class RoomCollectionViewCell: UICollectionViewCell {
     }()
 
     private let middleLineUIView: UIView = {
-        let line = CGRect(x: 95, y: 10, width: 1, height: 100)
-        let lineView = UIImageView(frame: line)
+        let lineView = UIImageView(frame: .zero)
         lineView.backgroundColor = .postechRed
-        lineView.layer.borderWidth = 1
-        lineView.layer.borderColor = UIColor.postechRed?.cgColor
-        lineView.layer.masksToBounds = true
         lineView.translatesAutoresizingMaskIntoConstraints = false
         return lineView
     }()
@@ -81,7 +83,6 @@ final class RoomCollectionViewCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.tintColor = .postechRed
         imageView.contentMode = .scaleAspectFill
-        imageView.layoutMargins = UIEdgeInsets(top: 63, left: 29, bottom: 48, right: 114)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -90,7 +91,6 @@ final class RoomCollectionViewCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.tintColor = .postechRed
         imageView.contentMode = .scaleAspectFill
-        imageView.layoutMargins = UIEdgeInsets(top: 63, left: 114, bottom: 48, right: 29)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -100,7 +100,7 @@ final class RoomCollectionViewCell: UICollectionViewCell {
         label.textAlignment = .center
         label.textColor = .postechRed
         label.font = UIFont.systemFont(ofSize: 17, weight: .light)
-        label.layoutMargins = UIEdgeInsets(top: 102, left: 20, bottom: 9, right: 105)
+        label.frame.size = label.intrinsicContentSize
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -110,7 +110,7 @@ final class RoomCollectionViewCell: UICollectionViewCell {
         label.textAlignment = .center
         label.textColor = .postechRed
         label.font = UIFont.systemFont(ofSize: 17, weight: .light)
-        label.layoutMargins = UIEdgeInsets(top: 102, left: 20, bottom: 9, right: 105)
+        label.frame.size = label.intrinsicContentSize
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
