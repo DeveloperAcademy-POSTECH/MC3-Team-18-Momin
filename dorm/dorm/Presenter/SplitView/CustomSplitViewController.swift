@@ -10,7 +10,7 @@ import UIKit
 final class CustomSplitViewController: UISplitViewController {
 
     // MARK: - Properties
-    private lazy var sideBarViewController: SidebarViewController = SidebarViewController()
+    private lazy var sideBarViewController: SidebarViewController = SidebarViewController(self)
     // 현재 보여지는 viewController 를 나타냄 -> 중복 교체 방지
     private var currentViewController: UIViewController?
 
@@ -18,7 +18,6 @@ final class CustomSplitViewController: UISplitViewController {
     override init(style: UISplitViewController.Style = .doubleColumn) {
         super.init(style: style)
         setUpViewControllers()
-        setUpDelegate()
     }
 
     required init?(coder: NSCoder) {
@@ -39,11 +38,6 @@ private extension CustomSplitViewController {
     func setUpViewControllers() {
         setViewController(sideBarViewController, for: .primary)
     }
-
-    func setUpDelegate() {
-        sideBarViewController.delegate = self
-    }
-
 }
 
 // MARK: - conform Sidebar Delegate 

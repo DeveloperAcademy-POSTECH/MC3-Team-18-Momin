@@ -14,9 +14,9 @@ protocol SidebarDelegate: AnyObject {
 final class SidebarViewController: UIViewController {
 
     // MARK: - Properties
-    private lazy var sidebar: Sidebar = Sidebar()
-    weak var delegate: SidebarDelegate?
-    private var isInitialzed: Bool = false
+    private lazy var sidebar: SidebarView = SidebarView()
+    private weak var delegate: SidebarDelegate?
+    private var isInitialzed = false
 
     // MARK: - ViewController Life cycle
     init(_ delegate: SidebarDelegate? = nil) {
@@ -30,17 +30,30 @@ final class SidebarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpDelegate()
+        setUpNavigationBar()
+    }
+
+    override func loadView() {
+        super.loadView()
+        view = sidebar
+    }
+
+}
+
+// MARK: - ViewController Setting
+private extension SidebarViewController {
+
+    func setUpDelegate() {
         sidebar.tableView.delegate = self
         sidebar.tableView.dataSource = self
+    }
+
+    func setUpNavigationBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always
         navigationItem.title = "Room manage"
     }
-
-    override func loadView() {
-        view = sidebar
-    }
-
 }
 
 // MARK: - UITableViewDelegate
@@ -53,13 +66,11 @@ extension SidebarViewController: UITableViewDelegate {
 
     // cell 을 처음으로 표시할 때, 첫 번째 cell을 selection 상태로 설정
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard !isInitialzed else { return }
+        guard !isInitialzed && indexPath.row == 0 else { return }
 
-        if indexPath.row == 0 {
-            isInitialzed = true
-            tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
-            tableView.delegate?.tableView?(tableView, didSelectRowAt: indexPath)
-        }
+        isInitialzed = true
+        tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
+        tableView.delegate?.tableView?(tableView, didSelectRowAt: indexPath)
     }
 
 }
@@ -72,7 +83,10 @@ extension SidebarViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: MenuCell = MenuCell(ScreenState.allCases[indexPath.row])
+        guard let cell: MenuCell = tableView.dequeueReusableCell(withIdentifier: MenuCell.className, for: indexPath) as? MenuCell else {
+            fatalError()
+        }
+        cell.configure(ScreenState.allCases[indexPath.row])
         return cell
     }
 }
