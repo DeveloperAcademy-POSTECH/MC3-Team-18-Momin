@@ -12,6 +12,19 @@ final class SeparatedRoomView: UIView {
     private var studentState = ["person", "person.fill"]
 
     private var student: Student
+    private var roomType: Int
+
+    lazy var horizontalDivider: UIView = {
+        let divider = UIView()
+        divider.backgroundColor = .gray
+        return divider
+    }()
+
+    lazy var verticalDivider: UIView = {
+        let divider = UIView()
+        divider.backgroundColor = .gray
+        return divider
+    }()
 
     lazy var roomNumberLabel: UILabel = {
         let roomNumber = UILabel()
@@ -21,28 +34,36 @@ final class SeparatedRoomView: UIView {
     }()
 
     lazy var studentInfo: UIStackView = {
-        let config = UIImage.SymbolConfiguration(textStyle: .headline)
-        let image = UIImage(systemName: studentState[student.state], withConfiguration: config)
-        let iconImage = UIImageView(image: image)
-        iconImage.tintColor = .black
-        iconImage.contentMode = .scaleAspectFit
         let studentName = UILabel()
         studentName.text = student.name
-        studentName.font = UIFont.systemFont(ofSize: 22)
-        let infoStack = UIStackView(arrangedSubviews: [iconImage, studentName])
-        infoStack.axis = .horizontal
+        studentName.font = UIFont.boldSystemFont(ofSize: 22)
+
+        let studentNationality = UILabel()
+        studentNationality.text = "Temp Country"
+        studentNationality.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
+        studentNationality.textColor = .gray
+
+        let infoStack = UIStackView(arrangedSubviews: [studentName, studentNationality])
+        infoStack.axis = .vertical
         infoStack.spacing = 10
         return infoStack
     }()
 
     lazy var detailScrollView: UIScrollView = {
         let scrollView = UIScrollView()
-        scrollView.backgroundColor = .yellow
         return scrollView
     }()
 
-    init(curStudent: Student) {
+    lazy var editButton: UIButton = {
+        let editBtn = UIButton(type: UIButton.ButtonType.system)
+        editBtn.setTitle("Edit", for: UIControl.State.normal)
+        editBtn.setTitleColor(UIColor.postechRed, for: .normal)
+        return editBtn
+    }()
+
+    init(curStudent: Student, roomType: Int) {
         self.student = curStudent
+        self.roomType = roomType
         super.init(frame: .zero)
         setUpViews()
     }
@@ -52,10 +73,20 @@ final class SeparatedRoomView: UIView {
     }
 
     private func setUpViews() {
-        self.backgroundColor = .gray
         setUpRoomNumberLabel()
         setUpStudentInfo()
         setUpScrollView()
+    
+        if roomType%2 == 0 {
+            addSubview(horizontalDivider)
+            horizontalDivider.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                horizontalDivider.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+                horizontalDivider.leftAnchor.constraint(equalTo: self.leftAnchor),
+                horizontalDivider.widthAnchor.constraint(equalTo: self.widthAnchor),
+                horizontalDivider.heightAnchor.constraint(equalToConstant: 0.5)
+            ])
+        }
     }
 }
 
@@ -65,6 +96,13 @@ private extension SeparatedRoomView {
         roomNumberLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             roomNumberLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20), roomNumberLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 20)
+        ])
+
+        addSubview(editButton)
+        editButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            editButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20),
+            editButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 20)
         ])
     }
 
@@ -93,7 +131,7 @@ private extension SeparatedRoomView {
 import SwiftUI
 struct SeparatedRoomPreview: PreviewProvider {
     static var previews: some View {
-        SeparatedRoomView(curStudent: Student(0, "Dean", "D", 102, 0)).toPreview().previewInterfaceOrientation(.landscapeRight)
+        SeparatedRoomView(curStudent: Student(0, "Dean", "D", 102, 0), roomType: 0).toPreview().previewInterfaceOrientation(.landscapeRight)
     }
 }
 #endif
