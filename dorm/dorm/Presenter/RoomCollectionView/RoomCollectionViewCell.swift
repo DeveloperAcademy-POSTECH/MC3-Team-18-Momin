@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RoomCollectionViewCell: UICollectionViewCell {
+final class RoomCollectionViewCell: UICollectionViewCell {
 
     static let identifier = "RoomCollectionViewCell"
 
