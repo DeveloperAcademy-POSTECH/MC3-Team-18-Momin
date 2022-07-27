@@ -72,7 +72,7 @@ private extension CustomSplitViewController {
 import SwiftUI
 struct CustomSplitViewControllerPreview: PreviewProvider {
     static var previews: some View {
-        CustomSplitViewController().toPreview()
+        CustomSplitViewController().toPreview().previewInterfaceOrientation(.landscapeLeft)
     }
 }
 #endif

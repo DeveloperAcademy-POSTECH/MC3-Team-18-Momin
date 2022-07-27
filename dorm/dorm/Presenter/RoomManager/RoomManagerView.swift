@@ -59,6 +59,7 @@ struct RoomManagerViewPreview: PreviewProvider {
             Text("Hello")
             RoomManagerView().toPreview()
         }
+        .previewInterfaceOrientation(.landscapeLeft)
     }
 }
 #endif
