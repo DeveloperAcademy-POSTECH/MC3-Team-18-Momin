@@ -10,16 +10,13 @@ import UIKit
 final class MenuCell: UITableViewCell {
 
     // MARK: - Properties
-    static let cellId = "MenuCell"
-    private let screenState: ScreenState
     private let titleLabel: UILabel = UILabel(frame: .zero)
-    private let icon: UIImageView
+    private let icon: UIImageView = UIImageView(frame: .zero)
 
     // MARK: - MenuCell Life cycle
-    init(_ screenState: ScreenState) {
-        self.screenState = screenState
-        self.icon = screenState.icon
-        super.init(style: .default, reuseIdentifier: MenuCell.cellId)
+
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .clear
         selectionStyle = .none
         setUpViews()
@@ -31,25 +28,30 @@ final class MenuCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        if selected {
-            icon.tintColor = .white
-            titleLabel.textColor = .white
-            contentView.backgroundColor = .postechRed
-        } else {
-            icon.tintColor = .postechRed
-            titleLabel.textColor = .black
-            contentView.backgroundColor = .clear
-        }
+        setSelected(selected)
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
     }
+
+    func configure(_ screenState: ScreenState) {
+        titleLabel.text = screenState.title
+        icon.image = screenState.icon
+    }
+
 }
 
 // MARK: - set up UI Componenets
 private extension MenuCell {
+
+    func setSelected(_ selected: Bool) {
+        icon.tintColor = selected ? .white : .postechRed
+        titleLabel.textColor = selected ? .white : .black
+        contentView.backgroundColor = selected ? .postechRed : .clear
+    }
+
     func setUpViews() {
         setUpContentView()
         setUpIcon()
@@ -64,7 +66,6 @@ private extension MenuCell {
     func setUpTitleLabel() {
         contentView.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.text = screenState.title
         titleLabel.font = .preferredFont(forTextStyle: .body)
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: icon.safeAreaLayoutGuide.trailingAnchor, constant: 16),
@@ -81,7 +82,9 @@ private extension MenuCell {
             icon.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])
     }
+
 }
+
 // MARK: - Preview
 #if DEBUG
 import SwiftUI
@@ -90,13 +93,13 @@ struct MenuCellPreview: PreviewProvider {
         Group {
             MenuCellPreview.makeMenuCell()
                 .previewInterfaceOrientation(.landscapeLeft)
-            MenuCell(.roomManage).toPreview()
+            MenuCell().toPreview()
                 .previewInterfaceOrientation(.landscapeLeft)
         }
     }
 
     static private func makeMenuCell() -> some View {
-        let menuCell: MenuCell = MenuCell(.roomManage)
+        let menuCell: MenuCell = MenuCell()
         menuCell.isSelected = true
         return menuCell.toPreview()
     }

@@ -7,19 +7,13 @@
 
 import UIKit
 
-final class Sidebar: UIView {
+final class SidebarView: UIView {
     // MARK: - Properties
-    lazy var tableView: UITableView = {
-        let tableView: UITableView = UITableView(frame: .zero, style: .grouped)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.separatorStyle = .none
-        tableView.rowHeight = 44
-        return tableView
-    }()
+    lazy var tableView: UITableView = UITableView(frame: .zero, style: .grouped)
+
     // MARK: - class Lifecycle
-    init() {
-        super.init(frame: .zero)
-        setUpViews()
+    convenience init() {
+        self.init(frame: .zero)
     }
 
     override init(frame: CGRect) {
@@ -33,7 +27,7 @@ final class Sidebar: UIView {
 }
 
 // MARK: - set up UI Components
-private extension Sidebar {
+private extension SidebarView {
 
     func setUpViews() {
         setUpTableView()
@@ -41,6 +35,10 @@ private extension Sidebar {
 
     func setUpTableView() {
         addSubview(tableView)
+        tableView.register(MenuCell.self, forCellReuseIdentifier: MenuCell.className)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.separatorStyle = .none
+        tableView.rowHeight = 44
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: topAnchor),
             tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
@@ -56,7 +54,7 @@ import SwiftUI
 struct SidebarPreview: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            Sidebar().toPreview()
+            SidebarView().toPreview()
         }
     }
 }

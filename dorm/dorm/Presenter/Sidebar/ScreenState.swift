@@ -25,12 +25,12 @@ extension ScreenState {
         }
     }
 
-    var icon: UIImageView {
+    var icon: UIImage? {
         switch self {
         case .roomManage:
-            return UIImageView(image: UIImage(systemName: "square.grid.3x3.fill")!)
+            return UIImage(systemName: "square.grid.3x3.fill")
         case .test:
-            return UIImageView(image: UIImage(systemName: "square.grid.3x3.fill")!)
+            return UIImage(systemName: "square.grid.3x3.fill")
         }
     }
 
