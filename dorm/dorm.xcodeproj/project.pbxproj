@@ -20,9 +20,9 @@
 		00F2D841288049E000BE4176 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F2D83F288049E000BE4176 /* LaunchScreen.storyboard */; };
 		00F789E428878E5F001D5AF8 /* CustomSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F789E328878E5F001D5AF8 /* CustomSplitViewController.swift */; };
 		00FA1BC1288522D90087929B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 00FA1BC0288522D90087929B /* .swiftlint.yml */; };
+		2A0388BB28863EF300B5DAD5 /* DocumentPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */; };
 		2A0388BD28878BD800B5DAD5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0388BC28878BD800B5DAD5 /* ColorExtension.swift */; };
 		C9F39AC42887935500CD0F3F /* MockDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F39AC32887935500CD0F3F /* MockDatas.swift */; };
-		2A0388BB28863EF300B5DAD5 /* DocumentPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,9 +41,9 @@
 		00F2D842288049E000BE4176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00F789E328878E5F001D5AF8 /* CustomSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSplitViewController.swift; sourceTree = "<group>"; };
 		00FA1BC0288522D90087929B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerViewController.swift; sourceTree = "<group>"; };
 		2A0388BC28878BD800B5DAD5 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		C9F39AC32887935500CD0F3F /* MockDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDatas.swift; sourceTree = "<group>"; };
-		2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -427,8 +427,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 44RS35G3C5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = dorm/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -442,8 +445,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = team.momin.dorm;
+				PRODUCT_BUNDLE_IDENTIFIER = team.momin.podom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = MOMIN_DEV;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -458,8 +463,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 44RS35G3C5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = dorm/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -473,8 +481,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = team.momin.dorm;
+				PRODUCT_BUNDLE_IDENTIFIER = team.momin.podom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = MOMIN_DEV;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
