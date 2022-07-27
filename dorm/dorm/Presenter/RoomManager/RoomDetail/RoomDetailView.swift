@@ -15,20 +15,13 @@ final class RoomDetailView: UIView {
     ]
 
     lazy var roomDetailStackView: UIStackView = {
-        let rooms = students.map { student in
-                SeparatedRoomView(curStudent: student)
+        let rooms = students.enumerated().map { (idx, student) -> UIView in
+            SeparatedRoomView(curStudent: student, roomType: idx)
         }
         let stackView = UIStackView(arrangedSubviews: rooms)
         stackView.axis = .vertical
-        stackView.spacing = 10
         stackView.distribution = .fillEqually
         return stackView
-    }()
-
-    lazy var expandButton: UIButton = {
-        let expandButton = UIButton(type: UIButton.ButtonType.system)
-        expandButton.setTitle("Expand", for: UIControl.State.normal)
-        return expandButton
     }()
 
     init() {
@@ -48,21 +41,13 @@ final class RoomDetailView: UIView {
     private func setUpViews() {
         self.backgroundColor = .systemBackground
 
-        // 화면 확장 버튼
-        addSubview(expandButton)
-        expandButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            expandButton.topAnchor.constraint(equalTo: self.topAnchor),
-            expandButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 30)
-        ])
-
         // 스택 뷰
         addSubview(roomDetailStackView)
         roomDetailStackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             roomDetailStackView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10),
             roomDetailStackView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10),
-            roomDetailStackView.topAnchor.constraint(equalTo: expandButton.bottomAnchor, constant: 10),
+            roomDetailStackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             roomDetailStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10)
         ])
     }
