@@ -209,6 +209,8 @@
 				2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */,
 			);
 			path = DocumentPickerView;
+			sourceTree = "<group>";
+		};
 		2198981C2886C10F008E0787 /* RoomDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +219,15 @@
 				211B25E02887BF8F00691B87 /* SeparatedRoomView.swift */,
 			);
 			path = RoomDetail;
+			sourceTree = "<group>";
+		};
+		2A0388B928863EDC00B5DAD5 /* DocumentPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */,
+			);
+			path = DocumentPickerView;
+
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
