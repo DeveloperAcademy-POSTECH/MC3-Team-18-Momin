@@ -14,26 +14,26 @@ final class SeparatedRoomView: UIView {
     private var student: Student
     private var roomType: Int
 
-    lazy var horizontalDivider: UIView = {
+    lazy private var horizontalDivider: UIView = {
         let divider = UIView()
         divider.backgroundColor = .gray
         return divider
     }()
 
-    lazy var verticalDivider: UIView = {
+    lazy private var verticalDivider: UIView = {
         let divider = UIView()
         divider.backgroundColor = .gray
         return divider
     }()
 
-    lazy var roomNumberLabel: UILabel = {
+    lazy private var roomNumberLabel: UILabel = {
         let roomNumber = UILabel()
         roomNumber.text = String(student.roomNumber)
         roomNumber.font = UIFont.boldSystemFont(ofSize: 28)
         return roomNumber
     }()
 
-    lazy var studentInfo: UIStackView = {
+    lazy private var studentInfo: UIStackView = {
         let studentName = UILabel()
         studentName.text = student.name
         studentName.font = UIFont.boldSystemFont(ofSize: 22)
@@ -49,12 +49,15 @@ final class SeparatedRoomView: UIView {
         return infoStack
     }()
 
-    lazy var detailScrollView: UIScrollView = {
-        let scrollView = UIScrollView()
-        return scrollView
+    lazy private var detailTextView: UITextView = {
+        let textView = UITextView()
+        textView.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        textView.font = UIFont.systemFont(ofSize: 90, weight: .semibold)
+        textView.isEditable = false
+        return textView
     }()
 
-    lazy var editButton: UIButton = {
+    lazy private var editButton: UIButton = {
         let editBtn = UIButton(type: UIButton.ButtonType.system)
         editBtn.setTitle("Edit", for: UIControl.State.normal)
         editBtn.setTitleColor(UIColor.postechRed, for: .normal)
@@ -75,9 +78,9 @@ final class SeparatedRoomView: UIView {
     private func setUpViews() {
         setUpRoomNumberLabel()
         setUpStudentInfo()
-        setUpScrollView()
-    
-        if roomType%2 == 0 {
+        setUpTextView()
+
+        if roomType != 1 {
             addSubview(horizontalDivider)
             horizontalDivider.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
@@ -115,14 +118,14 @@ private extension SeparatedRoomView {
         ])
     }
 
-    func setUpScrollView() {
-        addSubview(detailScrollView)
-        detailScrollView.translatesAutoresizingMaskIntoConstraints = false
+    func setUpTextView() {
+        addSubview(detailTextView)
+        detailTextView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            detailScrollView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20),
-            detailScrollView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20),
-            detailScrollView.topAnchor.constraint(equalTo: studentInfo.bottomAnchor, constant: 20),
-            detailScrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20)
+            detailTextView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20),
+            detailTextView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20),
+            detailTextView.topAnchor.constraint(equalTo: studentInfo.bottomAnchor, constant: 20),
+            detailTextView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20)
         ])
     }
 }

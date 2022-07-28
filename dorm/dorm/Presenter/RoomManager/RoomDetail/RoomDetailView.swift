@@ -9,10 +9,7 @@ import UIKit
 
 final class RoomDetailView: UIView {
 
-    private let students: [Student] = [
-        Student(0, "Ryan Kim", "Ryan", 201, 0),
-        Student(1, "Hi Lee", "Hi", 201, 1)
-    ]
+    private let students: [Student]
 
     lazy var roomDetailStackView: UIStackView = {
         let rooms = students.enumerated().map { (idx, student) -> UIView in
@@ -24,13 +21,9 @@ final class RoomDetailView: UIView {
         return stackView
     }()
 
-    init() {
+    init(students: [Student]) {
+        self.students = students
         super.init(frame: .zero)
-        setUpViews()
-    }
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
         setUpViews()
     }
 
@@ -57,7 +50,10 @@ final class RoomDetailView: UIView {
 import SwiftUI
 struct PreviewName: PreviewProvider {
     static var previews: some View {
-        RoomDetailView().toPreview().previewInterfaceOrientation(.landscapeLeft)
+        RoomDetailView(students: [
+            Student(0, "Ryan Kim", "Ryan", 201, 0),
+            Student(1, "Hi Lee", "Hi", 201, 1)
+        ]).toPreview().previewInterfaceOrientation(.landscapeLeft)
     }
 }
 #endif
