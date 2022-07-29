@@ -29,7 +29,7 @@
 		00FA1BC1288522D90087929B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 00FA1BC0288522D90087929B /* .swiftlint.yml */; };
 		2A0388BB28863EF300B5DAD5 /* DocumentPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */; };
 		2A0388BD28878BD800B5DAD5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0388BC28878BD800B5DAD5 /* ColorExtension.swift */; };
-		C93DA8E82890CAC800E658FE /* RoomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93DA8E72890CAC800E658FE /* RoomCollectionViewCell.swift */; };
+		C9E2C9FB2892235200DF5C70 /* RoomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E2C9FA2892235200DF5C70 /* RoomCollectionViewCell.swift */; };
 		C9F39AC42887935500CD0F3F /* MockDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F39AC32887935500CD0F3F /* MockDatas.swift */; };
 		211B25E12887BF8F00691B87 /* SeparatedRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211B25E02887BF8F00691B87 /* SeparatedRoomView.swift */; };
 		2193A5B828879B8B002CAFC5 /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2193A5B728879B8B002CAFC5 /* RoomDetailView.swift */; };
@@ -59,7 +59,7 @@
 		00FA1BC0288522D90087929B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerViewController.swift; sourceTree = "<group>"; };
 		2A0388BC28878BD800B5DAD5 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
-		C93DA8E72890CAC800E658FE /* RoomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCollectionViewCell.swift; sourceTree = "<group>"; };
+		C9E2C9FA2892235200DF5C70 /* RoomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCollectionViewCell.swift; sourceTree = "<group>"; };
 		C9F39AC32887935500CD0F3F /* MockDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDatas.swift; sourceTree = "<group>"; };
 		211B25E02887BF8F00691B87 /* SeparatedRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatedRoomView.swift; sourceTree = "<group>"; };
 		2193A5B728879B8B002CAFC5 /* RoomDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailView.swift; sourceTree = "<group>"; };
@@ -85,6 +85,7 @@
 				2198981C2886C10F008E0787 /* RoomDetail */,
 				002789BB288641CA00BDCDA4 /* RoomManagerViewController.swift */,
 				002789BD2886449A00BDCDA4 /* RoomManagerView.swift */,
+				C9E2C9FA2892235200DF5C70 /* RoomCollectionViewCell.swift */,
 			);
 			path = RoomManager;
 			sourceTree = "<group>";
@@ -230,14 +231,7 @@
 				2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */,
 			);
 			path = DocumentPickerView;
-
-		C93DA8E62890CAB600E658FE /* RoomCollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				C93DA8E72890CAC800E658FE /* RoomCollectionViewCell.swift */,
-			);
-			path = RoomCollectionView;
-			sourceTree = "<group>";
+			sourceTree = "<group">;
 		};
 /* End PBXGroup section */
 
@@ -345,7 +339,6 @@
 				0058621428916E2700D030F3 /* NSObjectExtension.swift in Sources */,
 				2198981E2886C17F008E0787 /* RoomDetailViewController.swift in Sources */,
 				007C698F28858C210074F653 /* DormRoom.swift in Sources */,
-				C93DA8E82890CAC800E658FE /* RoomCollectionViewCell.swift in Sources */,
 				002789BE2886449A00BDCDA4 /* RoomManagerView.swift in Sources */,
 				2193A5B828879B8B002CAFC5 /* RoomDetailView.swift in Sources */,
 				00F2D835288049DE00BE4176 /* AppDelegate.swift in Sources */,
@@ -357,6 +350,7 @@
 				211B25E12887BF8F00691B87 /* SeparatedRoomView.swift in Sources */,
 				00F2D837288049DE00BE4176 /* SceneDelegate.swift in Sources */,
 				008A5F542887A372006B202C /* ScreenState.swift in Sources */,
+				C9E2C9FB2892235200DF5C70 /* RoomCollectionViewCell.swift in Sources */,
 				002789BC288641CA00BDCDA4 /* RoomManagerViewController.swift in Sources */,
 				2A0388BB28863EF300B5DAD5 /* DocumentPickerViewController.swift in Sources */,
 				008A5F5C2887FFAB006B202C /* Sidebar.swift in Sources */,

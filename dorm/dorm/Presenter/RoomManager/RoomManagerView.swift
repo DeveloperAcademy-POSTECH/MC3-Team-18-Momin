@@ -10,7 +10,19 @@ import UIKit
 final class RoomManagerView: UIView {
 
     // MARK: - UI Component
-    lazy var roomCollectionView: UICollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    lazy var roomCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 60
+
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.register(RoomCollectionViewCell.self, forCellWithReuseIdentifier: "RoomCollectionViewCell")
+        collectionView.contentInset = UIEdgeInsets(top: UIScreen.main.bounds.height / 4.91, left: UIScreen.main.bounds.width / 29.85, bottom: 0, right: (UIScreen.main.bounds.width / 29.85)-1)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.isScrollEnabled = false
+        collectionView.backgroundColor = .clear
+
+        return collectionView
+    }()
 
     // MARK: - class Life cycle
     init() {
@@ -40,8 +52,6 @@ private extension RoomManagerView {
     func setUpCollectionView() {
         addSubview(roomCollectionView)
         roomCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        // FIXME: Collection View 의 영역을 가시적으로 보기위한 배경색 설정 -> 추후 삭제해야함
-        roomCollectionView.backgroundColor = .red
         NSLayoutConstraint.activate([
             roomCollectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             roomCollectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
