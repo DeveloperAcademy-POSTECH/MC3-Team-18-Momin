@@ -231,7 +231,7 @@
 				2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */,
 			);
 			path = DocumentPickerView;
-			sourceTree = "<group">;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
