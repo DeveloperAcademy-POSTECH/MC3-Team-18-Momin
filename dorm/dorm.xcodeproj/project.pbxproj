@@ -13,13 +13,15 @@
 		0058621428916E2700D030F3 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0058621328916E2700D030F3 /* NSObjectExtension.swift */; };
 		007C698D28858A3D0074F653 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C698C28858A3D0074F653 /* Student.swift */; };
 		007C698F28858C210074F653 /* DormRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C698E28858C210074F653 /* DormRoom.swift */; };
+		0089DCBE289374F4007E5414 /* PodomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0089DCBD289374F4007E5414 /* PodomTests.swift */; };
+		0089DCC62893758C007E5414 /* StudentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0089DCC52893758C007E5414 /* StudentRepository.swift */; };
+		0089DCC828937683007E5414 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0089DCC728937683007E5414 /* GoogleService-Info.plist */; };
 		008A5F542887A372006B202C /* ScreenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008A5F532887A372006B202C /* ScreenState.swift */; };
-		00E327E8288FCAFE0097C22D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 00E327E7288FCAFE0097C22D /* FirebaseAuth */; };
-		00E327EA288FCAFE0097C22D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 00E327E9288FCAFE0097C22D /* FirebaseFirestoreSwift */; };
-		00E327EC288FCBC80097C22D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00E327EB288FCBC80097C22D /* GoogleService-Info.plist */; };
 		008A5F5B2887FFAB006B202C /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008A5F592887FFAB006B202C /* SidebarViewController.swift */; };
 		008A5F5C2887FFAB006B202C /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008A5F5A2887FFAB006B202C /* SidebarView.swift */; };
 		008A5F5E288808F1006B202C /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008A5F5D288808F1006B202C /* MenuCell.swift */; };
+		00E327E8288FCAFE0097C22D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 00E327E7288FCAFE0097C22D /* FirebaseAuth */; };
+		00E327EA288FCAFE0097C22D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 00E327E9288FCAFE0097C22D /* FirebaseFirestoreSwift */; };
 		00F2D835288049DE00BE4176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2D834288049DE00BE4176 /* AppDelegate.swift */; };
 		00F2D837288049DE00BE4176 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2D836288049DE00BE4176 /* SceneDelegate.swift */; };
 		00F2D83C288049DE00BE4176 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F2D83A288049DE00BE4176 /* Main.storyboard */; };
@@ -34,7 +36,20 @@
 		211B25E12887BF8F00691B87 /* SeparatedRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211B25E02887BF8F00691B87 /* SeparatedRoomView.swift */; };
 		2193A5B828879B8B002CAFC5 /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2193A5B728879B8B002CAFC5 /* RoomDetailView.swift */; };
 		2198981E2886C17F008E0787 /* RoomDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2198981D2886C17F008E0787 /* RoomDetailViewController.swift */; };
+		2A0388BB28863EF300B5DAD5 /* DocumentPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */; };
+		2A0388BD28878BD800B5DAD5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0388BC28878BD800B5DAD5 /* ColorExtension.swift */; };
+		C9F39AC42887935500CD0F3F /* MockDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F39AC32887935500CD0F3F /* MockDatas.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0089DCBF289374F4007E5414 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00F2D829288049DE00BE4176 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00F2D830288049DE00BE4176;
+			remoteInfo = dorm;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		002789BB288641CA00BDCDA4 /* RoomManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomManagerViewController.swift; sourceTree = "<group>"; };
@@ -43,8 +58,11 @@
 		0058621328916E2700D030F3 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		007C698C28858A3D0074F653 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		007C698E28858C210074F653 /* DormRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DormRoom.swift; sourceTree = "<group>"; };
+		0089DCBB289374F4007E5414 /* podomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = podomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0089DCBD289374F4007E5414 /* PodomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodomTests.swift; sourceTree = "<group>"; };
+		0089DCC52893758C007E5414 /* StudentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRepository.swift; sourceTree = "<group>"; };
+		0089DCC728937683007E5414 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		008A5F532887A372006B202C /* ScreenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenState.swift; sourceTree = "<group>"; };
-		00E327EB288FCBC80097C22D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		008A5F592887FFAB006B202C /* SidebarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
 		008A5F5A2887FFAB006B202C /* SidebarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		008A5F5D288808F1006B202C /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
@@ -64,9 +82,19 @@
 		211B25E02887BF8F00691B87 /* SeparatedRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatedRoomView.swift; sourceTree = "<group>"; };
 		2193A5B728879B8B002CAFC5 /* RoomDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailView.swift; sourceTree = "<group>"; };
 		2198981D2886C17F008E0787 /* RoomDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailViewController.swift; sourceTree = "<group>"; };
+		2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerViewController.swift; sourceTree = "<group>"; };
+		2A0388BC28878BD800B5DAD5 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		C9F39AC32887935500CD0F3F /* MockDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDatas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0089DCB8289374F4007E5414 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00F2D82E288049DE00BE4176 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -99,6 +127,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		0089DCBC289374F4007E5414 /* podomTests */ = {
+			isa = PBXGroup;
+			children = (
+				0089DCBD289374F4007E5414 /* PodomTests.swift */,
+			);
+			path = podomTests;
+			sourceTree = "<group>";
+		};
+		0089DCC428937500007E5414 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				0089DCC52893758C007E5414 /* StudentRepository.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
 		008A5F582887FFAB006B202C /* Sidebar */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,9 +157,10 @@
 		00F2D828288049DE00BE4176 = {
 			isa = PBXGroup;
 			children = (
-				00E327EB288FCBC80097C22D /* GoogleService-Info.plist */,
+				0089DCC728937683007E5414 /* GoogleService-Info.plist */,
 				00FA1BC0288522D90087929B /* .swiftlint.yml */,
 				00F2D833288049DE00BE4176 /* dorm */,
+				0089DCBC289374F4007E5414 /* podomTests */,
 				00F2D832288049DE00BE4176 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -124,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				00F2D831288049DE00BE4176 /* dorm.app */,
+				0089DCBB289374F4007E5414 /* podomTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,6 +200,7 @@
 		00FA1BB8288504090087929B /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				0089DCC428937500007E5414 /* Interface */,
 				007C698B28858A260074F653 /* Model */,
 			);
 			path = Domain;
@@ -207,14 +254,6 @@
 			path = System;
 			sourceTree = "<group>";
 		};
-		2A0388B928863EDC00B5DAD5 /* DocumentPickerView */ = {
-			isa = PBXGroup;
-			children = (
-				2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */,
-			);
-			path = DocumentPickerView;
-			sourceTree = "<group>";
-		};
 		2198981C2886C10F008E0787 /* RoomDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +275,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0089DCBA289374F4007E5414 /* podomTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0089DCC3289374F4007E5414 /* Build configuration list for PBXNativeTarget "podomTests" */;
+			buildPhases = (
+				0089DCB7289374F4007E5414 /* Sources */,
+				0089DCB8289374F4007E5414 /* Frameworks */,
+				0089DCB9289374F4007E5414 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0089DCC0289374F4007E5414 /* PBXTargetDependency */,
+			);
+			name = podomTests;
+			productName = podomTests;
+			productReference = 0089DCBB289374F4007E5414 /* podomTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		00F2D830288049DE00BE4176 /* dorm */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00F2D845288049E000BE4176 /* Build configuration list for PBXNativeTarget "dorm" */;
@@ -265,9 +322,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					0089DCBA289374F4007E5414 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 00F2D830288049DE00BE4176;
+					};
 					00F2D830288049DE00BE4176 = {
 						CreatedOnToolsVersion = 14.0;
 					};
@@ -290,18 +351,26 @@
 			projectRoot = "";
 			targets = (
 				00F2D830288049DE00BE4176 /* dorm */,
+				0089DCBA289374F4007E5414 /* podomTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0089DCB9289374F4007E5414 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00F2D82F288049DE00BE4176 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				00FA1BC1288522D90087929B /* .swiftlint.yml in Resources */,
 				00F2D841288049E000BE4176 /* LaunchScreen.storyboard in Resources */,
-				00E327EC288FCBC80097C22D /* GoogleService-Info.plist in Resources */,
+				0089DCC828937683007E5414 /* GoogleService-Info.plist in Resources */,
 				00F2D83E288049E000BE4176 /* Assets.xcassets in Resources */,
 				00F2D83C288049DE00BE4176 /* Main.storyboard in Resources */,
 			);
@@ -331,6 +400,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0089DCB7289374F4007E5414 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0089DCBE289374F4007E5414 /* PodomTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00F2D82D288049DE00BE4176 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -353,13 +430,22 @@
 				C9E2C9FB2892235200DF5C70 /* RoomCollectionViewCell.swift in Sources */,
 				002789BC288641CA00BDCDA4 /* RoomManagerViewController.swift in Sources */,
 				2A0388BB28863EF300B5DAD5 /* DocumentPickerViewController.swift in Sources */,
-				008A5F5C2887FFAB006B202C /* Sidebar.swift in Sources */,
+				0089DCC62893758C007E5414 /* StudentRepository.swift in Sources */,
+				008A5F5C2887FFAB006B202C /* SidebarView.swift in Sources */,
 				008A5F5C2887FFAB006B202C /* SidebarView.swift in Sources */,
 				008A5F5B2887FFAB006B202C /* SidebarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0089DCC0289374F4007E5414 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00F2D830288049DE00BE4176 /* dorm */;
+			targetProxy = 0089DCBF289374F4007E5414 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		00F2D83A288049DE00BE4176 /* Main.storyboard */ = {
@@ -381,6 +467,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0089DCC1289374F4007E5414 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = team.momin.podomTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dorm.app/dorm";
+			};
+			name = Debug;
+		};
+		0089DCC2289374F4007E5414 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = team.momin.podomTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dorm.app/dorm";
+			};
+			name = Release;
+		};
 		00F2D843288049E000BE4176 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -509,6 +633,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 44RS35G3C5;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 44RS35G3C5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = dorm/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -582,6 +707,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0089DCC3289374F4007E5414 /* Build configuration list for PBXNativeTarget "podomTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0089DCC1289374F4007E5414 /* Debug */,
+				0089DCC2289374F4007E5414 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		00F2D82C288049DE00BE4176 /* Build configuration list for PBXProject "dorm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
