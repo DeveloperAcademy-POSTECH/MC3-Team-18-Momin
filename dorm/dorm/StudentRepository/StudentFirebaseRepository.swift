@@ -22,7 +22,7 @@ final class StudentFirebaseRepository {
 extension StudentFirebaseRepository: StudentRepository {
 
     func createStudents(_ id: String, _ students: [Student]) async throws -> [Student] {
-        let collectionRef = fireStore.collection("\(id)\(collectionName)")
+        let collectionRef = fireStore.collection(getCollectionName(id))
         let batch = fireStore.batch()
         for student in students {
             let docRef = collectionRef.document(String(student.id))
@@ -32,4 +32,15 @@ extension StudentFirebaseRepository: StudentRepository {
         return students
     }
 
+}
+
+// MARK: - Utility Functions
+private extension StudentFirebaseRepository {
+
+    /// Student Collection 이름을 반환하는 함수
+    /// - Parameter id: 동장 식별자
+    /// - Returns: Student 컬렉션 이름
+    func getCollectionName(_ id: String) -> String {
+        "\(id)\(collectionName)"
+    }
 }
