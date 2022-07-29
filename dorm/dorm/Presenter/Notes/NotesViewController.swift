@@ -13,6 +13,10 @@ final class NotesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    override func loadView() {
+        super.loadView()
         view = notesView
     }
 }
