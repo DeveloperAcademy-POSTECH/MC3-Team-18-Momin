@@ -16,6 +16,7 @@
 		0089DCBE289374F4007E5414 /* PodomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0089DCBD289374F4007E5414 /* PodomTests.swift */; };
 		0089DCC62893758C007E5414 /* StudentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0089DCC52893758C007E5414 /* StudentRepository.swift */; };
 		0089DCC828937683007E5414 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0089DCC728937683007E5414 /* GoogleService-Info.plist */; };
+		0089DCCB289376DF007E5414 /* StudentFirebaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0089DCCA289376DF007E5414 /* StudentFirebaseRepository.swift */; };
 		008A5F542887A372006B202C /* ScreenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008A5F532887A372006B202C /* ScreenState.swift */; };
 		008A5F5B2887FFAB006B202C /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008A5F592887FFAB006B202C /* SidebarViewController.swift */; };
 		008A5F5C2887FFAB006B202C /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008A5F5A2887FFAB006B202C /* SidebarView.swift */; };
@@ -62,6 +63,7 @@
 		0089DCBD289374F4007E5414 /* PodomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodomTests.swift; sourceTree = "<group>"; };
 		0089DCC52893758C007E5414 /* StudentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRepository.swift; sourceTree = "<group>"; };
 		0089DCC728937683007E5414 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0089DCCA289376DF007E5414 /* StudentFirebaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentFirebaseRepository.swift; sourceTree = "<group>"; };
 		008A5F532887A372006B202C /* ScreenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenState.swift; sourceTree = "<group>"; };
 		008A5F592887FFAB006B202C /* SidebarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
 		008A5F5A2887FFAB006B202C /* SidebarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
@@ -143,6 +145,14 @@
 			path = Interface;
 			sourceTree = "<group>";
 		};
+		0089DCC9289376CE007E5414 /* StudentRepository */ = {
+			isa = PBXGroup;
+			children = (
+				0089DCCA289376DF007E5414 /* StudentFirebaseRepository.swift */,
+			);
+			path = StudentRepository;
+			sourceTree = "<group>";
+		};
 		008A5F582887FFAB006B202C /* Sidebar */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +187,7 @@
 		00F2D833288049DE00BE4176 /* dorm */ = {
 			isa = PBXGroup;
 			children = (
+				0089DCC9289376CE007E5414 /* StudentRepository */,
 				00FA1BBA2885040F0087929B /* Data */,
 				00FA1BB8288504090087929B /* Domain */,
 				00FA1BBC288504240087929B /* Extension */,
@@ -433,6 +444,7 @@
 				0089DCC62893758C007E5414 /* StudentRepository.swift in Sources */,
 				008A5F5C2887FFAB006B202C /* SidebarView.swift in Sources */,
 				008A5F5C2887FFAB006B202C /* SidebarView.swift in Sources */,
+				0089DCCB289376DF007E5414 /* StudentFirebaseRepository.swift in Sources */,
 				008A5F5B2887FFAB006B202C /* SidebarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,6 +486,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 44RS35G3C5;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
@@ -493,6 +506,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 44RS35G3C5;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
