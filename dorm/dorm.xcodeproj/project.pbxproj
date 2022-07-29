@@ -13,6 +13,7 @@
 		0058621428916E2700D030F3 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0058621328916E2700D030F3 /* NSObjectExtension.swift */; };
 		007C698D28858A3D0074F653 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C698C28858A3D0074F653 /* Student.swift */; };
 		007C698F28858C210074F653 /* DormRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C698E28858C210074F653 /* DormRoom.swift */; };
+		00893E742893E7CE00A3B3D7 /* CreateStudentsUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00893E732893E7CE00A3B3D7 /* CreateStudentsUsecase.swift */; };
 		0089DCBE289374F4007E5414 /* PodomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0089DCBD289374F4007E5414 /* PodomTests.swift */; };
 		0089DCC62893758C007E5414 /* StudentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0089DCC52893758C007E5414 /* StudentRepository.swift */; };
 		0089DCC828937683007E5414 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0089DCC728937683007E5414 /* GoogleService-Info.plist */; };
@@ -59,6 +60,7 @@
 		0058621328916E2700D030F3 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		007C698C28858A3D0074F653 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		007C698E28858C210074F653 /* DormRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DormRoom.swift; sourceTree = "<group>"; };
+		00893E732893E7CE00A3B3D7 /* CreateStudentsUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStudentsUsecase.swift; sourceTree = "<group>"; };
 		0089DCBB289374F4007E5414 /* podomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = podomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0089DCBD289374F4007E5414 /* PodomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodomTests.swift; sourceTree = "<group>"; };
 		0089DCC52893758C007E5414 /* StudentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRepository.swift; sourceTree = "<group>"; };
@@ -127,6 +129,14 @@
 				007C698E28858C210074F653 /* DormRoom.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		00893E722893E7C200A3B3D7 /* Usecase */ = {
+			isa = PBXGroup;
+			children = (
+				00893E732893E7CE00A3B3D7 /* CreateStudentsUsecase.swift */,
+			);
+			path = Usecase;
 			sourceTree = "<group>";
 		};
 		0089DCBC289374F4007E5414 /* podomTests */ = {
@@ -211,6 +221,7 @@
 		00FA1BB8288504090087929B /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				00893E722893E7C200A3B3D7 /* Usecase */,
 				0089DCC428937500007E5414 /* Interface */,
 				007C698B28858A260074F653 /* Model */,
 			);
@@ -433,6 +444,7 @@
 				2A0388BD28878BD800B5DAD5 /* ColorExtension.swift in Sources */,
 				007C698D28858A3D0074F653 /* Student.swift in Sources */,
 				C9F39AC42887935500CD0F3F /* MockDatas.swift in Sources */,
+				00893E742893E7CE00A3B3D7 /* CreateStudentsUsecase.swift in Sources */,
 				002789C02886496E00BDCDA4 /* UIKitPreviewExtension.swift in Sources */,
 				008A5F5E288808F1006B202C /* MenuCell.swift in Sources */,
 				211B25E12887BF8F00691B87 /* SeparatedRoomView.swift in Sources */,
