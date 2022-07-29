@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1068719587252-lb9v26kthcc7m4v240do7ffd7baheu6q.apps.googleusercontent.com</string>
+	<string>1068719587252-htiqk6cdtta0n7pbi84ojnnbg8940ldg.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1068719587252-lb9v26kthcc7m4v240do7ffd7baheu6q</string>
+	<string>com.googleusercontent.apps.1068719587252-htiqk6cdtta0n7pbi84ojnnbg8940ldg</string>
 	<key>API_KEY</key>
 	<string>AIzaSyDmr9eLUzPGDQUcTEbt7OntWapTtSQq3k4</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>team.momin.dorm</string>
+	<string>team.momin.podom</string>
 	<key>PROJECT_ID</key>
 	<string>dorm-62c86</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1068719587252:ios:3404f35814bcb6ef77fce1</string>
+	<string>1:1068719587252:ios:9824d9a040391b3d77fce1</string>
 </dict>
 </plist>
