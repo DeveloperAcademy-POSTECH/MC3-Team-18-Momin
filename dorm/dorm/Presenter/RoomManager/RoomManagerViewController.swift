@@ -20,20 +20,6 @@ final class RoomManagerViewController: UIViewController {
         setUpToolBarTitle()
     }
 
-//    private var roomCollectionView: UICollectionView = {
-//        let layout = UICollectionViewFlowLayout()
-//        layout.minimumLineSpacing = 60
-//
-//        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-//        collectionView.register(RoomCollectionViewCell.self, forCellWithReuseIdentifier: "RoomCollectionViewCell")
-//        collectionView.contentInset = UIEdgeInsets(top: UIScreen.main.bounds.height / 4.91, left: UIScreen.main.bounds.width / 29.85, bottom: 0, right: (UIScreen.main.bounds.width / 29.85)-1)
-//        collectionView.translatesAutoresizingMaskIntoConstraints = false
-//        collectionView.isScrollEnabled = false
-//        collectionView.backgroundColor = .clear
-//
-//        return collectionView
-//    }()
-
     override func loadView() {
         super.loadView()
         view = roomManagerView

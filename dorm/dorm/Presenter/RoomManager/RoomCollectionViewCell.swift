@@ -20,7 +20,7 @@ final class RoomCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(rightPersonImageView)
         contentView.addSubview(leftPersonNameLabel)
         contentView.addSubview(rightPersonNameLabel)
-        
+
         NSLayoutConstraint.activate([
             roundedRectangleUIView.topAnchor.constraint(equalTo: topAnchor, constant: 29),
             roundedRectangleUIView.bottomAnchor.constraint(equalTo: bottomAnchor),
