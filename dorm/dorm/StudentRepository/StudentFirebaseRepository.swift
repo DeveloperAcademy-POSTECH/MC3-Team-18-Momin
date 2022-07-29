@@ -1,0 +1,35 @@
+//
+//  StudentFirebaseRepository.swift
+//  dorm
+//
+//  Created by JongHo Park on 2022/07/29.
+//
+
+import FirebaseFirestore
+import FirebaseFirestoreSwift
+
+final class StudentFirebaseRepository {
+    // MARK: - Properties
+    static let shared: StudentFirebaseRepository = StudentFirebaseRepository()
+    private let fireStore: Firestore = Firestore.firestore()
+    private let collectionName: String = "Students"
+
+    // MARK: - class Lifecycle
+    private init() {}
+}
+
+// MARK: - StudentRepository API
+extension StudentFirebaseRepository: StudentRepository {
+
+    func createStudents(_ id: String, _ students: [Student]) async throws -> [Student] {
+        let collectionRef = fireStore.collection("\(id)\(collectionName)")
+        let batch = fireStore.batch()
+        for student in students {
+            let docRef = collectionRef.document(String(student.id))
+            try batch.setData(from: student, forDocument: docRef)
+        }
+        try await batch.commit()
+        return students
+    }
+
+}

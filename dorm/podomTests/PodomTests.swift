@@ -9,7 +9,7 @@
 import XCTest
 
 final class StudentRepositoryTests: XCTestCase {
-    private var studentRepository: StudentRepository!
+    private var studentRepository: StudentRepository! = StudentFirebaseRepository.shared
 
     override func setUpWithError() throws {
         try super.setUpWithError()
