@@ -308,7 +308,8 @@
 				2A68A07428921E5C004BC6A0 /* DocumentPickerViewModel.swift */,
 			);
 			path = DocumentPickerView;
-
+			sourceTree = "<group>";
+		};
 		2AD47DB02892ED47008C4D21 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
