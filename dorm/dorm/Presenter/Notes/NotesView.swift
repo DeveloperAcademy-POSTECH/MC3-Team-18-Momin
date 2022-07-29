@@ -34,11 +34,13 @@ private extension NotesView {
     func setUpNotesView() {
         addSubview(notesField)
         notesField.translatesAutoresizingMaskIntoConstraints = false
+        notesField.becomeFirstResponder()
         //FIXME: TextInputField 영역 확인 위한 임시 색상 부여 삭제 예정
         notesField.textInputView.backgroundColor = .systemOrange
-        //FIXME: TextInputField, 인디케이터 임시 여백, 하이파이 비교 후 수정 예정
-        notesField.contentInset = .init(top: 40, left: 30, bottom: 20, right: 30)
+        notesField.backgroundColor = .systemBlue
+        notesField.contentInset = .init(top: 30, left: 30, bottom: 0, right: 30)
         notesField.scrollIndicatorInsets = .init(top: 10, left: 10, bottom: 10, right: 20)
+        notesField.font = UIFont.preferredFont(forTextStyle: .body)
         NSLayoutConstraint.activate([
             notesField.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             notesField.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
