@@ -14,18 +14,25 @@ final class RoomManagerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        roomManagerView.roomCollectionView.delegate = self
+        roomManagerView.roomCollectionView.dataSource = self
         setUpNavigationTitle()
         setUpToolBarTitle()
-        view.addSubview(roomCollectionView)
-        roomCollectionView.delegate = self
-        roomCollectionView.dataSource = self
-        NSLayoutConstraint.activate([
-            roomCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            roomCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            roomCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            roomCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
     }
+
+//    private var roomCollectionView: UICollectionView = {
+//        let layout = UICollectionViewFlowLayout()
+//        layout.minimumLineSpacing = 60
+//
+//        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+//        collectionView.register(RoomCollectionViewCell.self, forCellWithReuseIdentifier: "RoomCollectionViewCell")
+//        collectionView.contentInset = UIEdgeInsets(top: UIScreen.main.bounds.height / 4.91, left: UIScreen.main.bounds.width / 29.85, bottom: 0, right: (UIScreen.main.bounds.width / 29.85)-1)
+//        collectionView.translatesAutoresizingMaskIntoConstraints = false
+//        collectionView.isScrollEnabled = false
+//        collectionView.backgroundColor = .clear
+//
+//        return collectionView
+//    }()
 
     override func loadView() {
         super.loadView()
@@ -41,20 +48,6 @@ final class RoomManagerViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "import", style: .plain, target: nil, action: nil)
     }
 
-
-    private var roomCollectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 60
-
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(RoomCollectionViewCell.self, forCellWithReuseIdentifier: "RoomCollectionViewCell")
-        collectionView.contentInset = UIEdgeInsets(top: UIScreen.main.bounds.height / 4.91, left: UIScreen.main.bounds.width / 29.85, bottom: 0, right: (UIScreen.main.bounds.width / 29.85)-1)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.isScrollEnabled = false
-        collectionView.backgroundColor = .clear
-
-        return collectionView
-    }()
 }
 
 #if DEBUG
