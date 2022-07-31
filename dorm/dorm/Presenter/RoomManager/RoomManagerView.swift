@@ -24,6 +24,30 @@ final class RoomManagerView: UIView {
         return collectionView
     }()
 
+    // MARK: - UI Component
+    lazy var segmentedControlView: UISegmentedControl = {
+        let control = UISegmentedControl(items: ["1F", "2F", "3F", "4F"])
+        control.addTarget(self, action: #selector(segconChanged(segmentedControl:)), for: UIControl.Event.valueChanged)
+        control.translatesAutoresizingMaskIntoConstraints = false
+
+        return control
+    }()
+
+    @objc func segconChanged(segmentedControl: UISegmentedControl) {
+
+        switch segmentedControlView.selectedSegmentIndex {
+        case 0:
+                print("1f")
+        case 1:
+                print("2f")
+        case 2:
+                print("3f")
+        case 3:
+                print("4f")
+        default: return
+        }
+    }
+
     // MARK: - class Life cycle
     init() {
         super.init(frame: .zero)
@@ -47,6 +71,7 @@ private extension RoomManagerView {
         // TODO: navigation Title 과 toolbar button 추가해야함
         // TODO: Floor Segmented Control 추가해야함
         setUpCollectionView()
+        setUpSegmentedControlView()
     }
 
     func setUpCollectionView() {
@@ -57,6 +82,14 @@ private extension RoomManagerView {
             roomCollectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             roomCollectionView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
             roomCollectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+        ])
+    }
+
+    func setUpSegmentedControlView() {
+        addSubview(segmentedControlView)
+        segmentedControlView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            segmentedControlView.widthAnchor.constraint(equalToConstant: 330)
         ])
     }
 }
