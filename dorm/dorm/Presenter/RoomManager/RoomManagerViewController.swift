@@ -72,6 +72,6 @@ extension RoomManagerViewController: UICollectionViewDelegateFlowLayout, UIColle
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width / 7, height: UIScreen.main.bounds.height / 7.5)
+        return CGSize(width: UIScreen.main.bounds.width / 7, height: UIScreen.main.bounds.height / 6.3)
     }
 }
