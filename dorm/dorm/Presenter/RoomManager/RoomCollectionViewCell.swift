@@ -14,37 +14,37 @@ final class RoomCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.addSubview(roomNumberLabel)
-        contentView.addSubview(roundedRectangleUIView)
-        contentView.addSubview(middleLineUIView)
+        contentView.addSubview(roundedRectangleView)
+        contentView.addSubview(middleLineView)
         contentView.addSubview(leftPersonImageView)
         contentView.addSubview(rightPersonImageView)
         contentView.addSubview(leftPersonNameLabel)
         contentView.addSubview(rightPersonNameLabel)
 
         NSLayoutConstraint.activate([
-            roundedRectangleUIView.topAnchor.constraint(equalTo: topAnchor, constant: 29),
-            roundedRectangleUIView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            roundedRectangleUIView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            roundedRectangleUIView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            roundedRectangleView.topAnchor.constraint(equalTo: topAnchor, constant: 29),
+            roundedRectangleView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            roundedRectangleView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            roundedRectangleView.trailingAnchor.constraint(equalTo: trailingAnchor),
 
-            middleLineUIView.topAnchor.constraint(equalTo: roundedRectangleUIView.topAnchor),
-            middleLineUIView.bottomAnchor.constraint(equalTo: roundedRectangleUIView.bottomAnchor),
-            middleLineUIView.centerXAnchor.constraint(equalTo: roundedRectangleUIView.centerXAnchor),
-            middleLineUIView.widthAnchor.constraint(equalToConstant: 1),
+            middleLineView.topAnchor.constraint(equalTo: roundedRectangleView.topAnchor),
+            middleLineView.bottomAnchor.constraint(equalTo: roundedRectangleView.bottomAnchor),
+            middleLineView.centerXAnchor.constraint(equalTo: roundedRectangleView.centerXAnchor),
+            middleLineView.widthAnchor.constraint(equalToConstant: 1),
 
-            leftPersonImageView.centerXAnchor.constraint(equalTo: roundedRectangleUIView.leadingAnchor, constant: bounds.width / 4),
-            leftPersonImageView.topAnchor.constraint(equalTo: roundedRectangleUIView.topAnchor, constant: 34),
-            leftPersonImageView.bottomAnchor.constraint(equalTo: roundedRectangleUIView.bottomAnchor, constant: -48),
+            leftPersonImageView.centerXAnchor.constraint(equalTo: roundedRectangleView.leadingAnchor, constant: bounds.width / 4),
+            leftPersonImageView.topAnchor.constraint(equalTo: roundedRectangleView.topAnchor, constant: 34),
+            leftPersonImageView.bottomAnchor.constraint(equalTo: roundedRectangleView.bottomAnchor, constant: -48),
 
-            rightPersonImageView.centerXAnchor.constraint(equalTo: roundedRectangleUIView.trailingAnchor, constant: -(bounds.width / 4)),
-            rightPersonImageView.topAnchor.constraint(equalTo: roundedRectangleUIView.topAnchor, constant: 34),
-            rightPersonImageView.bottomAnchor.constraint(equalTo: roundedRectangleUIView.bottomAnchor, constant: -48),
+            rightPersonImageView.centerXAnchor.constraint(equalTo: roundedRectangleView.trailingAnchor, constant: -(bounds.width / 4)),
+            rightPersonImageView.topAnchor.constraint(equalTo: roundedRectangleView.topAnchor, constant: 34),
+            rightPersonImageView.bottomAnchor.constraint(equalTo: roundedRectangleView.bottomAnchor, constant: -48),
 
-            leftPersonNameLabel.centerXAnchor.constraint(equalTo: roundedRectangleUIView.leadingAnchor, constant: bounds.width / 4),
-            leftPersonNameLabel.bottomAnchor.constraint(equalTo: roundedRectangleUIView.bottomAnchor, constant: -9),
+            leftPersonNameLabel.centerXAnchor.constraint(equalTo: roundedRectangleView.leadingAnchor, constant: bounds.width / 4),
+            leftPersonNameLabel.bottomAnchor.constraint(equalTo: roundedRectangleView.bottomAnchor, constant: -9),
 
-            rightPersonNameLabel.centerXAnchor.constraint(equalTo: roundedRectangleUIView.trailingAnchor, constant: -(bounds.width / 4)),
-            rightPersonNameLabel.bottomAnchor.constraint(equalTo: roundedRectangleUIView.bottomAnchor, constant: -9)
+            rightPersonNameLabel.centerXAnchor.constraint(equalTo: roundedRectangleView.trailingAnchor, constant: -(bounds.width / 4)),
+            rightPersonNameLabel.bottomAnchor.constraint(equalTo: roundedRectangleView.bottomAnchor, constant: -9)
         ])
     }
 
@@ -61,7 +61,7 @@ final class RoomCollectionViewCell: UICollectionViewCell {
         return label
     }()
 
-    private let roundedRectangleUIView: UIView = {
+    private let roundedRectangleView: UIView = {
         let roundRectView = UIView()
         roundRectView.backgroundColor = .white
         roundRectView.layer.cornerRadius = 8
@@ -72,7 +72,7 @@ final class RoomCollectionViewCell: UICollectionViewCell {
         return roundRectView
     }()
 
-    private let middleLineUIView: UIView = {
+    private let middleLineView: UIView = {
         let lineView = UIImageView(frame: .zero)
         lineView.backgroundColor = .postechRed
         lineView.translatesAutoresizingMaskIntoConstraints = false
