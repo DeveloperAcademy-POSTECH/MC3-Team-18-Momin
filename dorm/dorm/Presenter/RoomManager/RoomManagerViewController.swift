@@ -27,6 +27,7 @@ final class RoomManagerViewController: UIViewController {
 
     private func setUpNavigationTitle() {
         navigationItem.title = "Room Manager"
+        navigationItem.titleView = roomManagerView.segmentedControlView
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 
