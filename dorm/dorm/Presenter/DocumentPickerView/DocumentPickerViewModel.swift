@@ -10,30 +10,25 @@ import Foundation
 final class DocumentPickerViewModel {
     var dormStudentData = [Student]()
     
-    func parseCSV(url: URL) -> [Student] {
-        //TODO: .csv 파일이 내장되어 있는 경우 임시값
-        let path = Bundle.main.path(forResource: "MockData_CSV", ofType: "csv")
-        
+    func parseCSV(url:URL) -> [Student] {
+        dormStudentData = []
         var encodedData = ""
         do {
             let data = try Data(contentsOf: url)
-            encodedData = String(data: data, encoding: .utf8)!
-            
+            encodedData = String(data: data, encoding: .utf8) ?? "error"
         } catch {
             print(error)
             return []
         }
         
         var csvRows = encodedData.components(separatedBy: "\n")
-        let colCount = csvRows.first?.components(separatedBy: "\n").count
         csvRows.removeFirst()
         
         for csvRow in csvRows {
             let csvColumns = csvRow.components(separatedBy: ",")
-            if csvColumns.count == colCount {
-                let studentEntity = Student.init(Int(csvColumns[0]) ?? 0, csvColumns[1], csvColumns[2], Int(csvColumns[3]) ?? 0, 0)
-                dormStudentData.append(studentEntity)
-            }
+            //FIXME: .csv파일에 따라 init 매개변수 변경예정 현재는 MockData_CSV.csv 에 따름
+            let studentEntity = Student.init(Int(csvColumns[1]) ?? 0, csvColumns[0], csvColumns[0], Int(csvColumns[2]) ?? 0, 0)
+            dormStudentData.append(studentEntity)
         }
         return dormStudentData
     }
