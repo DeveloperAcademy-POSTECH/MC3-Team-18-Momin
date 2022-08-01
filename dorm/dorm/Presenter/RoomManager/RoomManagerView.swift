@@ -17,7 +17,6 @@ final class RoomManagerView: UIView {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(RoomCollectionViewCell.self, forCellWithReuseIdentifier: "RoomCollectionViewCell")
         collectionView.contentInset = UIEdgeInsets(top: UIScreen.main.bounds.height / 6.5, left: UIScreen.main.bounds.width / 29.85, bottom: 0, right: (UIScreen.main.bounds.width / 29.85)-1)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.isScrollEnabled = false
         collectionView.backgroundColor = .clear
 
@@ -28,7 +27,6 @@ final class RoomManagerView: UIView {
     lazy var segmentedControlView: UISegmentedControl = {
         let control = UISegmentedControl(items: ["1F", "2F", "3F", "4F"])
         control.addTarget(self, action: #selector(segconChanged(segmentedControl:)), for: UIControl.Event.valueChanged)
-        control.translatesAutoresizingMaskIntoConstraints = false
 
         return control
     }()
