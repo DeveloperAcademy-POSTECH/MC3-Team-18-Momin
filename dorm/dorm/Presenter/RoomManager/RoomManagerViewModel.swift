@@ -9,8 +9,9 @@ import Foundation
 
 final class RoomManagerViewModel {
     var dormStudentData = [Student]()
+    var dormStudentDatas = [[Student]]()
     
-    func parseCSV(url:URL) -> [Student] {
+    func parseCSV(url:URL) -> [[Student]] {
         dormStudentData = []
         var encodedData = ""
         do {
@@ -24,12 +25,16 @@ final class RoomManagerViewModel {
         var csvRows = encodedData.components(separatedBy: "\n")
         csvRows.removeFirst()
         
-        for csvRow in csvRows {
+        for (index, csvRow) in csvRows.enumerated() {
             let csvColumns = csvRow.components(separatedBy: ",")
             //FIXME: .csv파일에 따라 init 매개변수 변경예정 현재는 MockData_CSV.csv 에 따름
             let studentEntity = Student.init(Int(csvColumns[1]) ?? 0, csvColumns[0], csvColumns[0], Int(csvColumns[2]) ?? 0, 0)
             dormStudentData.append(studentEntity)
+            if index % 2 != 0 {
+                dormStudentDatas.append(dormStudentData)
+                dormStudentData = []
+            }
         }
-        return dormStudentData
+        return dormStudentDatas
     }
 }
