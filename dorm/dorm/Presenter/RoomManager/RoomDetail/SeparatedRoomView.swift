@@ -7,13 +7,18 @@
 
 import UIKit
 
+protocol SeparatedRoomDelegate {
+    func editButtonPressed()
+}
+
 final class SeparatedRoomView: UIView {
 
     private var studentState = ["person", "person.fill"]
+    var delegate: SeparatedRoomDelegate?
 
     private var student: Student
     private var roomType: Int
-
+    
     lazy private var horizontalDivider: UIView = {
         let divider = UIView()
         divider.backgroundColor = .gray
@@ -61,18 +66,26 @@ final class SeparatedRoomView: UIView {
         let editBtn = UIButton(type: UIButton.ButtonType.system)
         editBtn.setTitle("Edit", for: UIControl.State.normal)
         editBtn.setTitleColor(UIColor.postechRed, for: .normal)
+            editBtn.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         return editBtn
     }()
-
+    
     init(curStudent: Student, roomType: Int) {
         self.student = curStudent
         self.roomType = roomType
         super.init(frame: .zero)
+        self.restorationIdentifier = "editButton"
         setUpViews()
     }
 
     required init?(coder: NSCoder) {
         fatalError("Don't need coder initializer")
+    }
+    
+    @objc func buttonPressed() {
+        if let delegate = delegate {
+            delegate.editButtonPressed()
+        }
     }
 
     private func setUpViews() {

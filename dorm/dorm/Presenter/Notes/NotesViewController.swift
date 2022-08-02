@@ -18,6 +18,14 @@ final class NotesViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view = notesView
+        view.backgroundColor = .white
+    }
+}
+
+extension NotesViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ nameField: UITextField) -> Bool {
+        nameField.resignFirstResponder()
+        return true
     }
 }
 
@@ -31,4 +39,3 @@ struct NotesViewControllerPreview: PreviewProvider {
     }
 }
 #endif
-
