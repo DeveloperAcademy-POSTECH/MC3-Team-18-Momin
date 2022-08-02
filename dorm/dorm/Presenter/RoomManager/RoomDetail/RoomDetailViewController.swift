@@ -27,7 +27,6 @@ class RoomDetailViewController: UIViewController, SeparatedRoomDelegate {
         view = roomDetailView
         for subview in roomDetailView.roomDetailStackView.subviews {
             if subview is SeparatedRoomView == true {
-                print((subview is SeparatedRoomView))
                 (subview as? SeparatedRoomView)?.delegate = self
             }
         }
