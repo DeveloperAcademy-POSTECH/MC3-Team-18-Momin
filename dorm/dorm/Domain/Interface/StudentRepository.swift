@@ -13,4 +13,6 @@ protocol StudentRepository {
     ///   - students: student 배열
     /// - Returns: 성공적으로 create 헀다면 Student 의 배열을, 만약 실패했다면 에러를 던진다
     func createStudents(_ id: String, _ students: [Student]) async throws -> [Student]
+    
+    func editStudent(_ id: String, _ student: Student) async throws -> Student
 }

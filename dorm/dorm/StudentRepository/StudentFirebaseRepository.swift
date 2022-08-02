@@ -20,6 +20,12 @@ final class StudentFirebaseRepository {
 
 // MARK: - StudentRepository API
 extension StudentFirebaseRepository: StudentRepository {
+    func editStudent(_ id: String, _ student: Student) async throws -> Student {
+        let collectionRef = fireStore.collection(getCollectionName(id))
+        let studentRef = collectionRef.document(String(student.id))
+        try await studentRef.setData(from: student)
+        return student
+    }
 
     func createStudents(_ id: String, _ students: [Student]) async throws -> [Student] {
         let collectionRef = fireStore.collection(getCollectionName(id))
