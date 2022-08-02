@@ -32,6 +32,7 @@ final class SidebarViewController: UIViewController {
         super.viewDidLoad()
         setUpDelegate()
         setUpNavigationBar()
+        navigationController?.navigationBar.tintColor = .postechRed
     }
 
     override func loadView() {

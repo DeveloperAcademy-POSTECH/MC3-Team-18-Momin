@@ -35,17 +35,19 @@ final class SeparatedRoomView: UIView {
         let roomNumber = UILabel()
         roomNumber.text = String(student.roomNumber)
         roomNumber.font = UIFont.boldSystemFont(ofSize: 28)
+        roomNumber.textColor = .black
         return roomNumber
     }()
 
     lazy private var studentInfo: UIStackView = {
         let studentName = UILabel()
         studentName.text = student.name
-        studentName.font = UIFont.boldSystemFont(ofSize: 22)
+        studentName.font = UIFont.boldSystemFont(ofSize: 24)
+        studentName.textColor = .black
 
         let studentNationality = UILabel()
-        studentNationality.text = "Temp Country"
-        studentNationality.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
+        studentNationality.text = "United Kingdom"
+        studentNationality.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         studentNationality.textColor = .gray
 
         let infoStack = UIStackView(arrangedSubviews: [studentName, studentNationality])
@@ -56,9 +58,11 @@ final class SeparatedRoomView: UIView {
 
     lazy private var detailTextView: UITextView = {
         let textView = UITextView()
-        textView.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        textView.font = UIFont.systemFont(ofSize: 90, weight: .semibold)
+        textView.text = "- Vegeterian"
+        textView.backgroundColor = .white
+        textView.font = UIFont.systemFont(ofSize: 24, weight: .regular)
         textView.isEditable = false
+        textView.textColor = .black
         return textView
     }()
 
@@ -111,14 +115,17 @@ private extension SeparatedRoomView {
         addSubview(roomNumberLabel)
         roomNumberLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            roomNumberLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20), roomNumberLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 20)
+            roomNumberLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 0),
+            roomNumberLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 0)
         ])
 
         addSubview(editButton)
         editButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            editButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20),
-            editButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 20)
+            editButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 130),
+            editButton.rightAnchor.constraint(equalTo: self.rightAnchor),
+            editButton.topAnchor.constraint(equalTo: self.topAnchor),
+            editButton.widthAnchor.constraint(equalTo: self.widthAnchor)
         ])
     }
 
@@ -126,8 +133,8 @@ private extension SeparatedRoomView {
         addSubview(studentInfo)
         studentInfo.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            studentInfo.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20),
-            studentInfo.topAnchor.constraint(equalTo: roomNumberLabel.bottomAnchor, constant: 20)
+            studentInfo.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 0),
+            studentInfo.topAnchor.constraint(equalTo: roomNumberLabel.bottomAnchor, constant: 0)
         ])
     }
 
@@ -135,10 +142,10 @@ private extension SeparatedRoomView {
         addSubview(detailTextView)
         detailTextView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            detailTextView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20),
-            detailTextView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20),
-            detailTextView.topAnchor.constraint(equalTo: studentInfo.bottomAnchor, constant: 20),
-            detailTextView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20)
+            detailTextView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 0),
+            detailTextView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 0),
+            detailTextView.topAnchor.constraint(equalTo: studentInfo.bottomAnchor, constant: 0),
+            detailTextView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0)
         ])
     }
 }

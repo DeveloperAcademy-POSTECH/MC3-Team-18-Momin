@@ -32,16 +32,16 @@ final class RoomDetailView: UIView {
     }
 
     private func setUpViews() {
-        self.backgroundColor = .systemBackground
+        self.backgroundColor = .white
 
         // 스택 뷰
         addSubview(roomDetailStackView)
         roomDetailStackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            roomDetailStackView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10),
-            roomDetailStackView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10),
-            roomDetailStackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-            roomDetailStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10)
+            roomDetailStackView.leftAnchor.constraint(equalTo: self.leftAnchor),
+            roomDetailStackView.rightAnchor.constraint(equalTo: self.rightAnchor),
+            roomDetailStackView.topAnchor.constraint(equalTo: self.topAnchor),
+            roomDetailStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
 }

@@ -17,7 +17,8 @@ final class RoomManagerView: UIView {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(RoomCollectionViewCell.self, forCellWithReuseIdentifier: "RoomCollectionViewCell")
         collectionView.contentInset = UIEdgeInsets(top: UIScreen.main.bounds.height / 6.5, left: UIScreen.main.bounds.width / 29.85, bottom: 0, right: (UIScreen.main.bounds.width / 29.85)-1)
-        collectionView.isScrollEnabled = false
+        collectionView.isScrollEnabled = true
+        collectionView.showsVerticalScrollIndicator = false
         collectionView.backgroundColor = .clear
 
         return collectionView
@@ -26,10 +27,19 @@ final class RoomManagerView: UIView {
     // MARK: - UI Component
     lazy var segmentedControlView: UISegmentedControl = {
         let control = UISegmentedControl(items: ["1F", "2F", "3F", "4F"])
+        control.selectedSegmentTintColor = .white
+        control.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: UIControl.State.normal)
         control.addTarget(self, action: #selector(segconChanged(segmentedControl:)), for: UIControl.Event.valueChanged)
 
         return control
     }()
+
+    var detailView: RoomDetailView! {
+        didSet {
+            addSubview(detailView)
+            setUpViews()
+        }
+    }
 
     @objc func segconChanged(segmentedControl: UISegmentedControl) {
 
@@ -49,12 +59,10 @@ final class RoomManagerView: UIView {
     // MARK: - class Life cycle
     init() {
         super.init(frame: .zero)
-        setUpViews()
     }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setUpViews()
     }
 
     required init?(coder: NSCoder) {
@@ -70,6 +78,7 @@ private extension RoomManagerView {
         // TODO: Floor Segmented Control 추가해야함
         setUpCollectionView()
         setUpSegmentedControlView()
+        setUpDetailView()
     }
 
     func setUpCollectionView() {
@@ -78,8 +87,18 @@ private extension RoomManagerView {
         NSLayoutConstraint.activate([
             roomCollectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             roomCollectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            roomCollectionView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            roomCollectionView.trailingAnchor.constraint(equalTo: detailView.leadingAnchor),
             roomCollectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+        ])
+    }
+
+    func setUpDetailView() {
+        detailView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            detailView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            detailView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            detailView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            detailView.widthAnchor.constraint(equalToConstant: 300)
         ])
     }
 
@@ -89,6 +108,25 @@ private extension RoomManagerView {
         NSLayoutConstraint.activate([
             segmentedControlView.widthAnchor.constraint(equalToConstant: 330)
         ])
+    }
+}
+
+// MARK: - API
+extension RoomManagerView {
+    func hideDetailView() {
+        UIView.animate(withDuration: 0.5, delay: 0) { [weak self] in
+            guard let self = self else { return }
+            self.detailView.widthConstraint?.constant = 0
+            self.layoutIfNeeded()
+        }
+    }
+
+    func showDetailView() {
+        UIView.animate(withDuration: 0.5, delay: 0) { [weak self] in
+            guard let self = self else { return }
+            self.detailView.widthConstraint?.constant = 300
+            self.layoutIfNeeded()
+        }
     }
 }
 
