@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import UniformTypeIdentifiers
 
 /// RoomManagerViewController - Room Collection View 와 Room Detail Controller 를 관리하는 ViewController 입니다.
 final class RoomManagerViewController: UIViewController {
-
+    private var csvUrl: URL?
     private lazy var roomManagerView: RoomManagerView = RoomManagerView()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         roomManagerView.roomCollectionView.delegate = self
@@ -19,22 +20,32 @@ final class RoomManagerViewController: UIViewController {
         setUpNavigationTitle()
         setUpToolBarTitle()
     }
-
+    
     override func loadView() {
         super.loadView()
         view = roomManagerView
     }
-
+    
     private func setUpNavigationTitle() {
         navigationItem.title = "Room Manager"
         navigationItem.titleView = roomManagerView.segmentedControlView
         navigationController?.navigationBar.prefersLargeTitles = true
     }
-
+    
     private func setUpToolBarTitle() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "import", style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "import", style: .plain, target: self, action: #selector(importButtonPressed(_: )))
     }
-
+    
+    @objc private func importButtonPressed(_ sender: Any) {
+        if presentedViewController == nil {
+            let csvTypes: [UTType] = [.data]
+            let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: csvTypes, asCopy: true)
+            documentPicker.delegate = self
+            documentPicker.modalPresentationStyle = .pageSheet
+            present(documentPicker, animated: true)
+        }
+    }
+    
 }
 
 #if DEBUG
@@ -46,32 +57,42 @@ struct RoomManagerViewControllerPreview: PreviewProvider {
                 Text("Room Manager")
             }
             UINavigationController(rootViewController: RoomManagerViewController())
-            .toPreview()
+                .toPreview()
         }
         .previewInterfaceOrientation(.landscapeLeft)
     }
 }
 #endif
 
-extension RoomManagerViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+extension RoomManagerViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UIDocumentPickerDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 18
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RoomCollectionViewCell.identifier, for: indexPath) as? RoomCollectionViewCell else { return UICollectionViewCell() }
-
+        
         if indexPath.row < MockDatas.students.count {
             cell.configureRoomStudents(students: MockDatas.students[indexPath.row])
         }
-
+        
         if indexPath.row < MockDatas.dormRooms.count {
             cell.configureDormRoomNumber(dormRooms: MockDatas.dormRooms[indexPath.row])
         }
         return cell
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width / 7, height: UIScreen.main.bounds.height / 6.3)
     }
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
+        dismiss(animated: true)
+        guard url.startAccessingSecurityScopedResource() else {
+            url.stopAccessingSecurityScopedResource()
+            return
+        }
+        url.stopAccessingSecurityScopedResource()
+        csvUrl = url
+    }
+
 }
