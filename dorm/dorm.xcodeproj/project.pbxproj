@@ -35,12 +35,9 @@
 		216B1B8A2898A76200A79916 /* EditStudentUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216B1B892898A76200A79916 /* EditStudentUsecase.swift */; };
 		2193A5B828879B8B002CAFC5 /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2193A5B728879B8B002CAFC5 /* RoomDetailView.swift */; };
 		2198981E2886C17F008E0787 /* RoomDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2198981D2886C17F008E0787 /* RoomDetailViewController.swift */; };
-		2A0388BB28863EF300B5DAD5 /* DocumentPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */; };
 		2A0388BD28878BD800B5DAD5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0388BC28878BD800B5DAD5 /* ColorExtension.swift */; };
+		2ACB83DA28990F45000ABD3F /* RoomManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACB83D928990F44000ABD3F /* RoomManagerViewModel.swift */; };
 		C9E2C9FB2892235200DF5C70 /* RoomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E2C9FA2892235200DF5C70 /* RoomCollectionViewCell.swift */; };
-		2A0388BB28863EF300B5DAD5 /* DocumentPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */; };
-		2A0388BD28878BD800B5DAD5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0388BC28878BD800B5DAD5 /* ColorExtension.swift */; };
-		2A68A07528921E5C004BC6A0 /* DocumentPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68A07428921E5C004BC6A0 /* DocumentPickerViewModel.swift */; };
 		C9F39AC42887935500CD0F3F /* MockDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F39AC32887935500CD0F3F /* MockDatas.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,12 +81,9 @@
 		216B1B892898A76200A79916 /* EditStudentUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStudentUsecase.swift; sourceTree = "<group>"; };
 		2193A5B728879B8B002CAFC5 /* RoomDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailView.swift; sourceTree = "<group>"; };
 		2198981D2886C17F008E0787 /* RoomDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailViewController.swift; sourceTree = "<group>"; };
-		2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerViewController.swift; sourceTree = "<group>"; };
 		2A0388BC28878BD800B5DAD5 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		2ACB83D928990F44000ABD3F /* RoomManagerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomManagerViewModel.swift; sourceTree = "<group>"; };
 		C9E2C9FA2892235200DF5C70 /* RoomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCollectionViewCell.swift; sourceTree = "<group>"; };
-		2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerViewController.swift; sourceTree = "<group>"; };
-		2A0388BC28878BD800B5DAD5 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
-		2A68A07428921E5C004BC6A0 /* DocumentPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerViewModel.swift; sourceTree = "<group>"; };
 		C9F39AC32887935500CD0F3F /* MockDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDatas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +114,7 @@
 				002789BB288641CA00BDCDA4 /* RoomManagerViewController.swift */,
 				002789BD2886449A00BDCDA4 /* RoomManagerView.swift */,
 				C9E2C9FA2892235200DF5C70 /* RoomCollectionViewCell.swift */,
+				2ACB83D928990F44000ABD3F /* RoomManagerViewModel.swift */,
 			);
 			path = RoomManager;
 			sourceTree = "<group>";
@@ -237,7 +232,6 @@
 				008A5F582887FFAB006B202C /* Sidebar */,
 				00F789E228878E51001D5AF8 /* SplitView */,
 				002789BA288641BC00BDCDA4 /* RoomManager */,
-				2A0388B928863EDC00B5DAD5 /* DocumentPickerView */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -286,15 +280,6 @@
 				211B25E02887BF8F00691B87 /* SeparatedRoomView.swift */,
 			);
 			path = RoomDetail;
-			sourceTree = "<group>";
-		};
-		2A0388B928863EDC00B5DAD5 /* DocumentPickerView */ = {
-			isa = PBXGroup;
-			children = (
-				2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */,
-				2A68A07428921E5C004BC6A0 /* DocumentPickerViewModel.swift */,
-			);
-			path = DocumentPickerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -452,12 +437,11 @@
 				002789C02886496E00BDCDA4 /* UIKitPreviewExtension.swift in Sources */,
 				008A5F5E288808F1006B202C /* MenuCell.swift in Sources */,
 				211B25E12887BF8F00691B87 /* SeparatedRoomView.swift in Sources */,
-				2A68A07528921E5C004BC6A0 /* DocumentPickerViewModel.swift in Sources */,
 				00F2D837288049DE00BE4176 /* SceneDelegate.swift in Sources */,
 				008A5F542887A372006B202C /* ScreenState.swift in Sources */,
 				C9E2C9FB2892235200DF5C70 /* RoomCollectionViewCell.swift in Sources */,
+				2ACB83DA28990F45000ABD3F /* RoomManagerViewModel.swift in Sources */,
 				002789BC288641CA00BDCDA4 /* RoomManagerViewController.swift in Sources */,
-				2A0388BB28863EF300B5DAD5 /* DocumentPickerViewController.swift in Sources */,
 				0089DCC62893758C007E5414 /* StudentRepository.swift in Sources */,
 				008A5F5C2887FFAB006B202C /* SidebarView.swift in Sources */,
 				008A5F5C2887FFAB006B202C /* SidebarView.swift in Sources */,
