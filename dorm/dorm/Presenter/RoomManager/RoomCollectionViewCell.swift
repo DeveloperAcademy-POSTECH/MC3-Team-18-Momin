@@ -25,6 +25,17 @@ final class RoomCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override var isSelected: Bool {
+        didSet {
+            roundedRectangleView.backgroundColor = isSelected ? .postechRed : .white
+            leftPersonNameLabel.textColor = isSelected ? .white : .postechRed
+            rightPersonNameLabel.textColor = isSelected ? .white : .postechRed
+            middleLineView.backgroundColor = isSelected ? .white : .postechRed
+            leftPersonImageView.tintColor = isSelected ? .white : .postechRed
+            rightPersonImageView.tintColor = isSelected ? .white : .postechRed
+        }
+    }
+
     // MARK: - UI Component
     private let roomNumberLabel: UILabel = {
         let label = UILabel()
@@ -88,6 +99,10 @@ final class RoomCollectionViewCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+
+    public func getRoundedRectView() -> UIView {
+        return self.roundedRectangleView
+    }
 }
 
 // MARK: - set up ui components
@@ -142,18 +157,33 @@ extension RoomCollectionViewCell {
         ])
     }
 
-    func configureRoomStudents(students: [Student]) {
-        leftPersonNameLabel.text = students[0].name
-        rightPersonNameLabel.text = students[1].name
-
+    func configureRoomStudents(students: [Student]?) {
         let sizeConfig = UIImage.SymbolConfiguration(pointSize: 25)
         let weightConfig = UIImage.SymbolConfiguration(weight: .light)
         let combined = sizeConfig.applying(weightConfig)
-        leftPersonImageView.image = UIImage(systemName: "person", withConfiguration: combined)
-        rightPersonImageView.image = UIImage(systemName: "person", withConfiguration: combined)
+
+        leftPersonNameLabel.text = students?[0].name
+        rightPersonNameLabel.text = students?[1].name
+
+        if students == nil {
+            leftPersonImageView.image = UIImage()
+            rightPersonImageView.image = UIImage()
+        } else {
+            leftPersonImageView.image = UIImage(systemName: "person", withConfiguration: combined)
+            rightPersonImageView.image = UIImage(systemName: "person", withConfiguration: combined)
+        }
     }
 
-    func configureDormRoomNumber(dormRooms: [DormRoom]) {
-        roomNumberLabel.text = String(dormRooms[0].roomNumber)
+    func configureDormRoomNumber(dormRooms: DormRoom) {
+        roomNumberLabel.text = String(dormRooms.roomNumber)
+    }
+
+    func configureCell(index: Int) {
+        if MockDatas.dormRooms[index].currentMembers.isEmpty {
+            configureRoomStudents(students: nil)
+        } else {
+            configureRoomStudents(students: MockDatas.students[index])
+        }
+        configureDormRoomNumber(dormRooms: MockDatas.dormRooms[index])
     }
 }

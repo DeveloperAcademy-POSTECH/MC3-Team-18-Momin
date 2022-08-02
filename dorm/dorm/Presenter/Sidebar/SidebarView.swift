@@ -38,6 +38,7 @@ private extension SidebarView {
         tableView.register(MenuCell.self, forCellReuseIdentifier: MenuCell.className)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .white
         tableView.rowHeight = 44
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: topAnchor),
