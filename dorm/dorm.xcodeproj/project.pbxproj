@@ -24,7 +24,6 @@
 		008A5F5E288808F1006B202C /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008A5F5D288808F1006B202C /* MenuCell.swift */; };
 		00E327E8288FCAFE0097C22D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 00E327E7288FCAFE0097C22D /* FirebaseAuth */; };
 		00E327EA288FCAFE0097C22D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 00E327E9288FCAFE0097C22D /* FirebaseFirestoreSwift */; };
-		00E327EC288FCBC80097C22D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00E327EB288FCBC80097C22D /* GoogleService-Info.plist */; };
 		00F2D835288049DE00BE4176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2D834288049DE00BE4176 /* AppDelegate.swift */; };
 		00F2D837288049DE00BE4176 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2D836288049DE00BE4176 /* SceneDelegate.swift */; };
 		00F2D83C288049DE00BE4176 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F2D83A288049DE00BE4176 /* Main.storyboard */; };
@@ -32,21 +31,14 @@
 		00F2D841288049E000BE4176 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F2D83F288049E000BE4176 /* LaunchScreen.storyboard */; };
 		00F789E428878E5F001D5AF8 /* CustomSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F789E328878E5F001D5AF8 /* CustomSplitViewController.swift */; };
 		00FA1BC1288522D90087929B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 00FA1BC0288522D90087929B /* .swiftlint.yml */; };
-		2A0388BB28863EF300B5DAD5 /* DocumentPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */; };
-		2A0388BD28878BD800B5DAD5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0388BC28878BD800B5DAD5 /* ColorExtension.swift */; };
-		2AD47DB22892ED50008C4D21 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD47DB12892ED50008C4D21 /* NotesView.swift */; };
-		2AD47DB42892EDCD008C4D21 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD47DB32892EDCD008C4D21 /* NotesViewController.swift */; };
-		C9F39AC42887935500CD0F3F /* MockDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F39AC32887935500CD0F3F /* MockDatas.swift */; };
 		211B25E12887BF8F00691B87 /* SeparatedRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211B25E02887BF8F00691B87 /* SeparatedRoomView.swift */; };
 		216B1B8A2898A76200A79916 /* EditStudentUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216B1B892898A76200A79916 /* EditStudentUsecase.swift */; };
 		2193A5B828879B8B002CAFC5 /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2193A5B728879B8B002CAFC5 /* RoomDetailView.swift */; };
 		2198981E2886C17F008E0787 /* RoomDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2198981D2886C17F008E0787 /* RoomDetailViewController.swift */; };
-		2A0388BB28863EF300B5DAD5 /* DocumentPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */; };
 		2A0388BD28878BD800B5DAD5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0388BC28878BD800B5DAD5 /* ColorExtension.swift */; };
+		2AD47DB22892ED50008C4D21 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD47DB12892ED50008C4D21 /* NotesView.swift */; };
+		2AD47DB42892EDCD008C4D21 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD47DB32892EDCD008C4D21 /* NotesViewController.swift */; };
 		C9E2C9FB2892235200DF5C70 /* RoomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E2C9FA2892235200DF5C70 /* RoomCollectionViewCell.swift */; };
-		2A0388BB28863EF300B5DAD5 /* DocumentPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */; };
-		2A0388BD28878BD800B5DAD5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0388BC28878BD800B5DAD5 /* ColorExtension.swift */; };
-		2A68A07528921E5C004BC6A0 /* DocumentPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68A07428921E5C004BC6A0 /* DocumentPickerViewModel.swift */; };
 		C9F39AC42887935500CD0F3F /* MockDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F39AC32887935500CD0F3F /* MockDatas.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,7 +69,6 @@
 		008A5F592887FFAB006B202C /* SidebarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
 		008A5F5A2887FFAB006B202C /* SidebarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		008A5F5D288808F1006B202C /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
-		00E327EB288FCBC80097C22D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		00F2D831288049DE00BE4176 /* dorm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dorm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F2D834288049DE00BE4176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00F2D836288049DE00BE4176 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,21 +78,14 @@
 		00F2D842288049E000BE4176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00F789E328878E5F001D5AF8 /* CustomSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSplitViewController.swift; sourceTree = "<group>"; };
 		00FA1BC0288522D90087929B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerViewController.swift; sourceTree = "<group>"; };
-		2A0388BC28878BD800B5DAD5 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
-		2AD47DB12892ED50008C4D21 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
-		2AD47DB32892EDCD008C4D21 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
-		C9F39AC32887935500CD0F3F /* MockDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDatas.swift; sourceTree = "<group>"; };
 		211B25E02887BF8F00691B87 /* SeparatedRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatedRoomView.swift; sourceTree = "<group>"; };
 		216B1B892898A76200A79916 /* EditStudentUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStudentUsecase.swift; sourceTree = "<group>"; };
 		2193A5B728879B8B002CAFC5 /* RoomDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailView.swift; sourceTree = "<group>"; };
 		2198981D2886C17F008E0787 /* RoomDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailViewController.swift; sourceTree = "<group>"; };
-		2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerViewController.swift; sourceTree = "<group>"; };
 		2A0388BC28878BD800B5DAD5 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		2AD47DB12892ED50008C4D21 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
+		2AD47DB32892EDCD008C4D21 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		C9E2C9FA2892235200DF5C70 /* RoomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCollectionViewCell.swift; sourceTree = "<group>"; };
-		2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerViewController.swift; sourceTree = "<group>"; };
-		2A0388BC28878BD800B5DAD5 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
-		2A68A07428921E5C004BC6A0 /* DocumentPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerViewModel.swift; sourceTree = "<group>"; };
 		C9F39AC32887935500CD0F3F /* MockDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDatas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -250,7 +234,6 @@
 				008A5F582887FFAB006B202C /* Sidebar */,
 				00F789E228878E51001D5AF8 /* SplitView */,
 				002789BA288641BC00BDCDA4 /* RoomManager */,
-				2A0388B928863EDC00B5DAD5 /* DocumentPickerView */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -299,15 +282,6 @@
 				211B25E02887BF8F00691B87 /* SeparatedRoomView.swift */,
 			);
 			path = RoomDetail;
-			sourceTree = "<group>";
-		};
-		2A0388B928863EDC00B5DAD5 /* DocumentPickerView */ = {
-			isa = PBXGroup;
-			children = (
-				2A0388BA28863EF300B5DAD5 /* DocumentPickerViewController.swift */,
-				2A68A07428921E5C004BC6A0 /* DocumentPickerViewModel.swift */,
-			);
-			path = DocumentPickerView;
 			sourceTree = "<group>";
 		};
 		2AD47DB02892ED47008C4D21 /* Notes */ = {
@@ -476,12 +450,10 @@
 				002789C02886496E00BDCDA4 /* UIKitPreviewExtension.swift in Sources */,
 				008A5F5E288808F1006B202C /* MenuCell.swift in Sources */,
 				211B25E12887BF8F00691B87 /* SeparatedRoomView.swift in Sources */,
-				2A68A07528921E5C004BC6A0 /* DocumentPickerViewModel.swift in Sources */,
 				00F2D837288049DE00BE4176 /* SceneDelegate.swift in Sources */,
 				008A5F542887A372006B202C /* ScreenState.swift in Sources */,
 				C9E2C9FB2892235200DF5C70 /* RoomCollectionViewCell.swift in Sources */,
 				002789BC288641CA00BDCDA4 /* RoomManagerViewController.swift in Sources */,
-				2A0388BB28863EF300B5DAD5 /* DocumentPickerViewController.swift in Sources */,
 				0089DCC62893758C007E5414 /* StudentRepository.swift in Sources */,
 				008A5F5C2887FFAB006B202C /* SidebarView.swift in Sources */,
 				008A5F5C2887FFAB006B202C /* SidebarView.swift in Sources */,
