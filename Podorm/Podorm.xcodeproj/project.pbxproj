@@ -96,12 +96,13 @@
 			isa = PBXGroup;
 			children = (
 				00B318CB28B71D0D00B422EF /* Injected */,
+				00B318CF28B71E6200B422EF /* Interactors */,
 				00B318CA28B71D0200B422EF /* Models */,
 				00B318C928B71CFE00B422EF /* Repository */,
-				00B318C728B71CA500B422EF /* Utility */,
-				00B318C528B71C9A00B422EF /* UI */,
-				00B318C428B71C9400B422EF /* System */,
 				00B318C328B71C5100B422EF /* Resources */,
+				00B318C428B71C9400B422EF /* System */,
+				00B318C528B71C9A00B422EF /* UI */,
+				00B318C728B71CA500B422EF /* Utility */,
 			);
 			path = Podorm;
 			sourceTree = "<group>";
@@ -134,8 +135,8 @@
 		00B318C328B71C5100B422EF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				00B318CE28B71D5200B422EF /* Info.plist */,
 				00B3189D28B71A6500B422EF /* Assets.xcassets */,
+				00B318CE28B71D5200B422EF /* Info.plist */,
 				00B3189F28B71A6500B422EF /* Preview Content */,
 			);
 			path = Resources;
@@ -191,6 +192,13 @@
 			children = (
 			);
 			path = Injected;
+			sourceTree = "<group>";
+		};
+		00B318CF28B71E6200B422EF /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
