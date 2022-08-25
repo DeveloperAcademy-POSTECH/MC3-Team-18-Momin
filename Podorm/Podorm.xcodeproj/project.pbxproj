@@ -44,6 +44,7 @@
 		00B318B028B71A6500B422EF /* PodormUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PodormUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00B318B428B71A6500B422EF /* PodormUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodormUITests.swift; sourceTree = "<group>"; };
 		00B318B628B71A6500B422EF /* PodormUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodormUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		00B318CE28B71D5200B422EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +95,13 @@
 		00B3189828B71A6300B422EF /* Podorm */ = {
 			isa = PBXGroup;
 			children = (
-				00B3189928B71A6300B422EF /* PodormApp.swift */,
-				00B3189B28B71A6300B422EF /* ContentView.swift */,
-				00B3189D28B71A6500B422EF /* Assets.xcassets */,
-				00B3189F28B71A6500B422EF /* Preview Content */,
+				00B318CB28B71D0D00B422EF /* Injected */,
+				00B318CA28B71D0200B422EF /* Models */,
+				00B318C928B71CFE00B422EF /* Repository */,
+				00B318C728B71CA500B422EF /* Utility */,
+				00B318C528B71C9A00B422EF /* UI */,
+				00B318C428B71C9400B422EF /* System */,
+				00B318C328B71C5100B422EF /* Resources */,
 			);
 			path = Podorm;
 			sourceTree = "<group>";
@@ -125,6 +129,68 @@
 				00B318B628B71A6500B422EF /* PodormUITestsLaunchTests.swift */,
 			);
 			path = PodormUITests;
+			sourceTree = "<group>";
+		};
+		00B318C328B71C5100B422EF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				00B318CE28B71D5200B422EF /* Info.plist */,
+				00B3189D28B71A6500B422EF /* Assets.xcassets */,
+				00B3189F28B71A6500B422EF /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		00B318C428B71C9400B422EF /* System */ = {
+			isa = PBXGroup;
+			children = (
+				00B3189928B71A6300B422EF /* PodormApp.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		00B318C528B71C9A00B422EF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				00B318C628B71C9F00B422EF /* Screen */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		00B318C628B71C9F00B422EF /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				00B3189B28B71A6300B422EF /* ContentView.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		00B318C728B71CA500B422EF /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		00B318C928B71CFE00B422EF /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		00B318CA28B71D0200B422EF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		00B318CB28B71D0D00B422EF /* Injected */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Injected;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,15 +482,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Podorm/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Podorm/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 44RS35G3C5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = Podorm/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -434,7 +501,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -445,15 +512,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Podorm/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Podorm/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 44RS35G3C5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = Podorm/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -463,7 +531,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
