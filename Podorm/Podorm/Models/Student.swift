@@ -31,6 +31,12 @@ struct Student: Codable {
     }
 }
 
+extension Student: Equatable, Hashable {
+    static func == (lhs: Student, rhs: Student) -> Bool {
+        lhs.id == rhs.id && lhs.name == rhs.name && lhs.nickname == rhs.nickname && lhs.state == rhs.state && lhs.roomNumber == rhs.roomNumber
+    }
+}
+
 // MARK: - toString
 extension Student: CustomStringConvertible {
     var description: String {
@@ -38,8 +44,9 @@ extension Student: CustomStringConvertible {
     }
 }
 
-// MARK: - property to Readable String
+// MARK: - Public Interfaces
 extension Student {
+
     var checkInState: String {
         switch state {
         case 0:
@@ -51,3 +58,22 @@ extension Student {
         }
     }
 }
+
+// MARK: - icon
+#if canImport(SwiftUI)
+import SwiftUI
+
+// TODO: 상태에 맞는 아이콘 추가해야함
+extension Student {
+    var icon: Image {
+        switch state {
+        case 0:
+            return Image(systemName: "person.fill")
+        case 1:
+            return Image(systemName: "person.fill")
+        default:
+            fatalError("unknown checkIn status")
+        }
+    }
+}
+#endif
