@@ -8,14 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @Environment(\.injected) private var injected: DIContainer
+    @EnvironmentObject private var appState: AppState
+
+    private let isRunningTests: Bool
+
+    init(isRunningTests: Bool = ProcessInfo.processInfo.isRunningTests) {
+        self.isRunningTests = isRunningTests
+    }
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        if isRunningTests {
+            Text("Running unit tests")
+        } else {
+            Text("Content View")
+        }
     }
 }
 
+// MARK: - Preview
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .injectPreview()
     }
 }

@@ -14,6 +14,15 @@
 		00B318AB28B71A6500B422EF /* PodormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B318AA28B71A6500B422EF /* PodormTests.swift */; };
 		00B318B528B71A6500B422EF /* PodormUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B318B428B71A6500B422EF /* PodormUITests.swift */; };
 		00B318B728B71A6500B422EF /* PodormUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B318B628B71A6500B422EF /* PodormUITestsLaunchTests.swift */; };
+		00BBBF2628B8CE430070D177 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BBBF2528B8CE430070D177 /* AppState.swift */; };
+		00BBBF2828B8CE5D0070D177 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BBBF2728B8CE5D0070D177 /* Helpers.swift */; };
+		00BBBF2A28B8CE620070D177 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BBBF2928B8CE620070D177 /* Loadable.swift */; };
+		00BBBF2C28B8CEB50070D177 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BBBF2B28B8CEB50070D177 /* Color.swift */; };
+		00BBBF2E28B8CEE80070D177 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BBBF2D28B8CEE80070D177 /* DIContainer.swift */; };
+		00BBBF3028B8CEF50070D177 /* Interactors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BBBF2F28B8CEF50070D177 /* Interactors.swift */; };
+		00BBBF3228B8D0570070D177 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BBBF3128B8D0570070D177 /* Student.swift */; };
+		00BBBF3428B8D0620070D177 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BBBF3328B8D0620070D177 /* Room.swift */; };
+		00BBBF3628B8D0C10070D177 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 00BBBF3528B8D0C10070D177 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +54,15 @@
 		00B318B428B71A6500B422EF /* PodormUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodormUITests.swift; sourceTree = "<group>"; };
 		00B318B628B71A6500B422EF /* PodormUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodormUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		00B318CE28B71D5200B422EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00BBBF2528B8CE430070D177 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		00BBBF2728B8CE5D0070D177 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		00BBBF2928B8CE620070D177 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		00BBBF2B28B8CEB50070D177 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		00BBBF2D28B8CEE80070D177 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		00BBBF2F28B8CEF50070D177 /* Interactors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactors.swift; sourceTree = "<group>"; };
+		00BBBF3128B8D0570070D177 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		00BBBF3328B8D0620070D177 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		00BBBF3528B8D0C10070D177 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +93,7 @@
 		00B3188D28B71A6300B422EF = {
 			isa = PBXGroup;
 			children = (
+				00BBBF3528B8D0C10070D177 /* .swiftlint.yml */,
 				00B3189828B71A6300B422EF /* Podorm */,
 				00B318A928B71A6500B422EF /* PodormTests */,
 				00B318B328B71A6500B422EF /* PodormUITests */,
@@ -169,6 +188,9 @@
 		00B318C728B71CA500B422EF /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				00BBBF2728B8CE5D0070D177 /* Helpers.swift */,
+				00BBBF2928B8CE620070D177 /* Loadable.swift */,
+				00BBBF2B28B8CEB50070D177 /* Color.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -183,6 +205,8 @@
 		00B318CA28B71D0200B422EF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				00BBBF3128B8D0570070D177 /* Student.swift */,
+				00BBBF3328B8D0620070D177 /* Room.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,6 +214,8 @@
 		00B318CB28B71D0D00B422EF /* Injected */ = {
 			isa = PBXGroup;
 			children = (
+				00BBBF2528B8CE430070D177 /* AppState.swift */,
+				00BBBF2D28B8CEE80070D177 /* DIContainer.swift */,
 			);
 			path = Injected;
 			sourceTree = "<group>";
@@ -197,6 +223,7 @@
 		00B318CF28B71E6200B422EF /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				00BBBF2F28B8CEF50070D177 /* Interactors.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -208,6 +235,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00B318BA28B71A6500B422EF /* Build configuration list for PBXNativeTarget "Podorm" */;
 			buildPhases = (
+				00BBBF3728B8D0D90070D177 /* Swiftlint script */,
 				00B3189228B71A6300B422EF /* Sources */,
 				00B3189328B71A6300B422EF /* Frameworks */,
 				00B3189428B71A6300B422EF /* Resources */,
@@ -305,6 +333,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00BBBF3628B8D0C10070D177 /* .swiftlint.yml in Resources */,
 				00B318A128B71A6500B422EF /* Preview Assets.xcassets in Resources */,
 				00B3189E28B71A6500B422EF /* Assets.xcassets in Resources */,
 			);
@@ -326,13 +355,42 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		00BBBF3728B8D0D90070D177 /* Swiftlint script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swiftlint script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\" \nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		00B3189228B71A6300B422EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00BBBF2E28B8CEE80070D177 /* DIContainer.swift in Sources */,
+				00BBBF2628B8CE430070D177 /* AppState.swift in Sources */,
+				00BBBF3028B8CEF50070D177 /* Interactors.swift in Sources */,
 				00B3189C28B71A6300B422EF /* ContentView.swift in Sources */,
+				00BBBF3428B8D0620070D177 /* Room.swift in Sources */,
+				00BBBF3228B8D0570070D177 /* Student.swift in Sources */,
 				00B3189A28B71A6300B422EF /* PodormApp.swift in Sources */,
+				00BBBF2828B8CE5D0070D177 /* Helpers.swift in Sources */,
+				00BBBF2A28B8CE620070D177 /* Loadable.swift in Sources */,
+				00BBBF2C28B8CEB50070D177 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,7 +552,7 @@
 				DEVELOPMENT_TEAM = 44RS35G3C5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Podorm/Info.plist;
+				INFOPLIST_FILE = Podorm/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -524,7 +582,7 @@
 				DEVELOPMENT_TEAM = 44RS35G3C5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Podorm/Info.plist;
+				INFOPLIST_FILE = Podorm/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
