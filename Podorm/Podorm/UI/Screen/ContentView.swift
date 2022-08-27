@@ -22,11 +22,12 @@ struct ContentView: View {
         if isRunningTests {
             Text("Running unit tests")
         } else {
-            Text("Content View")
+            RoomManager()
         }
     }
 }
 
+#if DEBUG
 // MARK: - Preview
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
@@ -34,3 +35,4 @@ struct ContentView_Previews: PreviewProvider {
             .injectPreview()
     }
 }
+#endif

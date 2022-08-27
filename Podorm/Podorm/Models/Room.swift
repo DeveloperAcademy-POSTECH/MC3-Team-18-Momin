@@ -23,6 +23,12 @@ struct DormRoom: Codable {
     }
 }
 
+extension DormRoom: Equatable, Hashable {
+    static func == (lhs: DormRoom, rhs: DormRoom) -> Bool {
+        return lhs.roomNumber == rhs.roomNumber && lhs.maxNumber == rhs.maxNumber && lhs.currentMembers == rhs.currentMembers
+    }
+}
+
 // MARK: - toString
 extension DormRoom: CustomStringConvertible {
     var description: String {

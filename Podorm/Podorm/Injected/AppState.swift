@@ -21,7 +21,11 @@ final class AppState: ObservableObject {
 extension AppState {
 
     struct UserData {
+        var dormRooms: Loadable<[DormRoom]>
 
+        init(dormRooms: Loadable<[DormRoom]> = .notRequested) {
+            self.dormRooms = dormRooms
+        }
     }
 
 }

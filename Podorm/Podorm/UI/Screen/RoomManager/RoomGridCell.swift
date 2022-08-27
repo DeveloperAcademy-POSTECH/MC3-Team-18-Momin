@@ -53,7 +53,7 @@ private extension RoomGridCell {
 
     // TODO: Interact with Interactors
     func loadStudents(of room: DormRoom) {
-        
+
     }
 
 }
@@ -137,23 +137,25 @@ private extension RoomGridCell {
 #if DEBUG
 // MARK: - Preview
 struct RoomGridCell_Previews: PreviewProvider {
+
+    static func makePreview(_ students: Loadable<[Student]>, selected: Bool = false) -> some View {
+        RoomGridCell(room: DormRoom.mockData.first!, selected: selected, students: students) {
+
+        }
+        .padding()
+        .previewLayout(.sizeThatFits)
+        .previewInterfaceOrientation(.landscapeLeft)
+    }
+
     static var previews: some View {
         Group {
-            RoomGridCell(room: DormRoom.mockData.first!, students: .isLoading(last: nil))
-                .padding()
-                .previewLayout(.sizeThatFits)
+            makePreview(.isLoading(last: nil))
                 .previewDisplayName("Loading View")
-            RoomGridCell(room: DormRoom.mockData.first!, students: .loaded(Student.mockData))
-                .padding()
-                .previewLayout(.sizeThatFits)
+            makePreview(.loaded(Student.mockData))
                 .previewDisplayName("Loaded View")
-            RoomGridCell(room: DormRoom.mockData.first!, selected: true, students: .loaded(Student.mockData))
-                .padding()
-                .previewLayout(.sizeThatFits)
+            makePreview(.loaded(Student.mockData), selected: true)
                 .previewDisplayName("Selected Loaded View")
-            RoomGridCell(room: DormRoom.mockData.first!, students: .failed(NSError()))
-                .padding()
-                .previewLayout(.sizeThatFits)
+            makePreview(.failed(NSError()))
                 .previewDisplayName("Failed View")
         }
     }
