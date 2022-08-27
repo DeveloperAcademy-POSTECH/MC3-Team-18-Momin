@@ -11,13 +11,50 @@ struct RoomManager: View {
     @EnvironmentObject private var appState: AppState
     @Environment(\.injected) private var diContainer: DIContainer
 
+    // 여기다가 선언하면 안되는 거 같은데 그러면 어디다가 해야되는 지를 모르겠어..
+    @State private var floorNumber: DormFloor = .first
+    var floors = ["1F", "2F", "3F", "4F"]
+
     var body: some View {
         VStack {
             content()
         }
         .onAppear(perform: requestDormRooms)
         .navigationTitle("Dorm manager")
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                control
+            }
+            // 문제의 그 녀석
+            ToolbarItemGroup(placement: .automatic) {
+                Button("Select") {
+                    print("Select")
+                }
+
+                Button("Import") {
+                    print("Import")
+                }
+            }
+        }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+    }
+
+    var control: some View {
+        Picker("DiCE Floor", selection: $floorNumber) {
+            ForEach(DormFloor.allCases, id: \.self) {
+                Text($0.rawValue)
+                        }
+        }
+        .pickerStyle(.segmented)
+        .frame(width: 360)
+    }
+    
+    // swith case 넣을려고 만들어 놓은 거
+    enum DormFloor: String, CaseIterable {
+        case first = "1F"
+        case second = "2F"
+        case third = "3F"
+        case fourth = "4F"
     }
 }
 
