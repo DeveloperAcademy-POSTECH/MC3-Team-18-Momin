@@ -12,6 +12,7 @@ struct RoomManager: View {
     @Environment(\.injected) private var diContainer: DIContainer
 
     @State private var floorNumber: DormFloor = .first
+    @State private var showDocumentPicker = false
 
     var body: some View {
         VStack {
@@ -21,6 +22,9 @@ struct RoomManager: View {
         .navigationTitle("Dorm manager")
         .toolbar(content: toolbarDorm)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        .sheet(isPresented: $showDocumentPicker) {
+            DocumentPickerView()
+        }
     }
 }
 
@@ -63,7 +67,7 @@ private extension RoomManager {
             }
             ToolbarItem(placement: .automatic) {
                 Button("Import") {
-                    print("Import")
+                    showDocumentPicker = true
                 }
             }
     }
