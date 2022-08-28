@@ -19,53 +19,8 @@ struct RoomManager: View {
         }
         .onAppear(perform: requestDormRooms)
         .navigationTitle("Dorm manager")
-        .toolbar {
-            ToolbarItem(placement: .principal) {
-                control
-            }
-            ToolbarItem(placement: .automatic) {
-                Button("Select") {
-                    print("Select")
-                }
-            }
-            ToolbarItem(placement: .automatic) {
-                Button("Import") {
-                    print("Import")
-                }
-            }
-        }
+        .toolbar(content: toolbarDorm)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-    }
-
-    enum DormFloor: String, CaseIterable {
-        case first = "1F"
-        case second = "2F"
-        case third = "3F"
-        case fourth = "4F"
-    }
-
-    // 추후에 데이터 가져올 때 쓰기 위해 일단 만들어놓음
-    func switchFloor() {
-        switch floorNumber {
-        case .first:
-            print("1F")
-        case .second:
-            print("2F")
-        case .third:
-            print("3F")
-        case .fourth:
-            print("4F")
-        }
-    }
-
-    var control: some View {
-        Picker("DiCE Floor", selection: $floorNumber) {
-            ForEach(DormFloor.allCases, id: \.self) {
-                Text($0.rawValue)
-            }
-        }
-        .pickerStyle(.segmented)
-        .frame(width: 360)
     }
 }
 
@@ -91,6 +46,59 @@ private extension RoomManager {
         case .failed(let error):
             errorIndicator(error)
         }
+    }
+}
+
+// MARK: - toolbar
+private extension RoomManager {
+    @ToolbarContentBuilder
+    func toolbarDorm() -> some ToolbarContent {
+            ToolbarItem(placement: .principal) {
+                segmentedControl()
+            }
+            ToolbarItem(placement: .automatic) {
+                Button("Select") {
+                    print("Select")
+                }
+            }
+            ToolbarItem(placement: .automatic) {
+                Button("Import") {
+                    print("Import")
+                }
+            }
+    }
+}
+
+// MARK: - Segmented Control
+private extension RoomManager {
+    func segmentedControl() -> some View {
+        Picker("DiCE Floor", selection: $floorNumber) {
+            ForEach(DormFloor.allCases, id: \.self) {
+                Text($0.rawValue)
+            }
+        }
+        .pickerStyle(.segmented)
+        .frame(width: 360)
+    }
+
+    func switchFloor() {
+        switch floorNumber {
+        case .first:
+            print("1F")
+        case .second:
+            print("2F")
+        case .third:
+            print("3F")
+        case .fourth:
+            print("4F")
+        }
+    }
+
+    enum DormFloor: String, CaseIterable {
+        case first = "1F"
+        case second = "2F"
+        case third = "3F"
+        case fourth = "4F"
     }
 }
 
