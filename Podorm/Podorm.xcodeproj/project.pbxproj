@@ -26,6 +26,7 @@
 		00BBBF3C28B8D57B0070D177 /* RoomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BBBF3B28B8D57B0070D177 /* RoomManager.swift */; };
 		00BBBF3E28B8D5C40070D177 /* RoomGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BBBF3D28B8D5C40070D177 /* RoomGridCell.swift */; };
 		00BBBF4028B8D6490070D177 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BBBF3F28B8D6490070D177 /* MockData.swift */; };
+		2AF2F74F28BBD8C100F993DA /* DocumentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2F74E28BBD8C100F993DA /* DocumentPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		00BBBF3B28B8D57B0070D177 /* RoomManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomManager.swift; sourceTree = "<group>"; };
 		00BBBF3D28B8D5C40070D177 /* RoomGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomGridCell.swift; sourceTree = "<group>"; };
 		00BBBF3F28B8D6490070D177 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		2AF2F74E28BBD8C100F993DA /* DocumentPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +243,7 @@
 			children = (
 				00BBBF3B28B8D57B0070D177 /* RoomManager.swift */,
 				00BBBF3D28B8D5C40070D177 /* RoomGridCell.swift */,
+				2AF2F74E28BBD8C100F993DA /* DocumentPickerView.swift */,
 			);
 			path = RoomManager;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				00B3189A28B71A6300B422EF /* PodormApp.swift in Sources */,
 				00BBBF2828B8CE5D0070D177 /* Helpers.swift in Sources */,
 				00BBBF2A28B8CE620070D177 /* Loadable.swift in Sources */,
+				2AF2F74F28BBD8C100F993DA /* DocumentPickerView.swift in Sources */,
 				00BBBF3C28B8D57B0070D177 /* RoomManager.swift in Sources */,
 				00BBBF2C28B8CEB50070D177 /* Color.swift in Sources */,
 			);
