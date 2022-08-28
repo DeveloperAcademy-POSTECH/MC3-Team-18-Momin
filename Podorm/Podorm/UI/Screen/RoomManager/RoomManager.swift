@@ -11,9 +11,7 @@ struct RoomManager: View {
     @EnvironmentObject private var appState: AppState
     @Environment(\.injected) private var diContainer: DIContainer
 
-    // 여기다가 선언하면 안되는 거 같은데 그러면 어디다가 해야되는 지를 모르겠어..
     @State private var floorNumber: DormFloor = .first
-    var floors = ["1F", "2F", "3F", "4F"]
 
     var body: some View {
         VStack {
@@ -25,12 +23,12 @@ struct RoomManager: View {
             ToolbarItem(placement: .principal) {
                 control
             }
-            // 문제의 그 녀석
-            ToolbarItemGroup(placement: .automatic) {
+            ToolbarItem(placement: .automatic) {
                 Button("Select") {
                     print("Select")
                 }
-
+            }
+            ToolbarItem(placement: .automatic) {
                 Button("Import") {
                     print("Import")
                 }
@@ -39,22 +37,35 @@ struct RoomManager: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
     }
 
-    var control: some View {
-        Picker("DiCE Floor", selection: $floorNumber) {
-            ForEach(DormFloor.allCases, id: \.self) {
-                Text($0.rawValue)
-                        }
-        }
-        .pickerStyle(.segmented)
-        .frame(width: 360)
-    }
-    
-    // swith case 넣을려고 만들어 놓은 거
     enum DormFloor: String, CaseIterable {
         case first = "1F"
         case second = "2F"
         case third = "3F"
         case fourth = "4F"
+    }
+
+    // 추후에 데이터 가져올 때 쓰기 위해 일단 만들어놓음
+    func switchFloor() {
+        switch floorNumber {
+        case .first:
+            print("1F")
+        case .second:
+            print("2F")
+        case .third:
+            print("3F")
+        case .fourth:
+            print("4F")
+        }
+    }
+
+    var control: some View {
+        Picker("DiCE Floor", selection: $floorNumber) {
+            ForEach(DormFloor.allCases, id: \.self) {
+                Text($0.rawValue)
+            }
+        }
+        .pickerStyle(.segmented)
+        .frame(width: 360)
     }
 }
 
@@ -137,7 +148,7 @@ struct RoomManager_Previews: PreviewProvider {
         }
         .injectPreview(AppState(AppState.UserData(dormRooms: roomState)))
         .previewInterfaceOrientation(.landscapeLeft)
-        .tint(.postechRed)
+        .accentColor(.postechRed)
     }
 
     static var previews: some View {
