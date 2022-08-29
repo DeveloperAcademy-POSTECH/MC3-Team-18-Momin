@@ -22,7 +22,10 @@ struct ContentView: View {
         if isRunningTests {
             Text("Running unit tests")
         } else {
-            RoomManager()
+            NavigationView {
+                EmptyView()
+                RoomManager()
+            }
         }
     }
 }
