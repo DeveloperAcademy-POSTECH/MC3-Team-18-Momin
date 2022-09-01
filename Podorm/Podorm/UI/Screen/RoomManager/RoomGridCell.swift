@@ -103,6 +103,7 @@ private extension RoomGridCell {
                 }
             }
         }
+        .contentShape(Rectangle())
         .onTapGesture(perform: onClick)
     }
 

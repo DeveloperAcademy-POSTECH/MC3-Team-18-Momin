@@ -13,10 +13,18 @@ struct RoomManager: View {
 
     @State private var floorNumber: DormFloor = .first
     @State private var showDocumentPicker = false
+    @State private var currentSelectedRoom: DormRoom?
 
     var body: some View {
         VStack {
-            content()
+            HStack {
+                content()
+                VStack {
+                    Text("Hello World")
+                }
+                .frame(width: currentSelectedRoom == nil ? 0 : 400)
+                .animation(.easeInOut, value: currentSelectedRoom)
+            }
         }
         .onAppear(perform: requestDormRooms)
         .navigationTitle("Dorm manager")
@@ -127,12 +135,26 @@ private extension RoomManager {
     }
 
     func roomGrid(_ rooms: [DormRoom]) -> some View {
-        LazyVGrid(columns: lazyColumn, spacing: 60) {
-            ForEach(rooms, id: \.self) { room in
-                RoomGridCell(room: room)
+        ScrollView(.vertical) {
+            LazyVGrid(columns: lazyColumn, spacing: 60) {
+                ForEach(rooms, id: \.self) { room in
+                    RoomGridCell(room: room, selected: currentSelectedRoom == room) {
+                        onRoomSelected(room)
+                    }
+                }
             }
+            .padding(30)
         }
-        .padding(30)
+        .animation(.easeInOut, value: currentSelectedRoom)
+        .frame(maxWidth: .infinity)
+    }
+
+    func onRoomSelected(_ room: DormRoom) {
+        if currentSelectedRoom == room {
+            currentSelectedRoom = nil
+        } else {
+            currentSelectedRoom = room
+        }
     }
 }
 
