@@ -19,9 +19,9 @@ struct RoomManager: View {
         VStack {
             HStack {
                 content()
-                VStack {
-                    Text("Hello World")
-                }
+//                VStack {
+                    roomDetail()
+//                }
                 .frame(width: currentSelectedRoom == nil ? 0 : 400)
                 .animation(.easeInOut, value: currentSelectedRoom)
             }
@@ -57,6 +57,57 @@ private extension RoomManager {
             loaded(rooms)
         case .failed(let error):
             errorIndicator(error)
+        }
+    }
+}
+
+// MARK: - Room Detail View
+private extension RoomManager {
+    func roomDetail() -> some View {
+        VStack(alignment: .leading) {
+            HStack {
+                Text("101 A")
+                    .font(.title.bold())
+                Spacer()
+                Button("Edit") {
+                    print("Select")
+                }
+                .padding(.trailing, 20)
+            }
+            Text("Nick")
+                .font(.title3.bold())
+                .padding(.top, 4)
+            Text("국적")
+                .font(.callout)
+                .foregroundColor(.gray)
+                .padding(.top, 1)
+            Text("메모 내용 보여지는 곳")
+                .foregroundColor(.postechRed)
+                .padding(.top, 1)
+
+            Spacer()
+
+            HStack {
+                Text("101 A")
+                    .font(.title.bold())
+                Spacer()
+                Button("Edit") {
+                    print("Select")
+                }
+                .padding(.trailing, 20)
+            }
+            Text("Nick")
+                .font(.title3.bold())
+                .padding(.top, 4)
+            Text("국적")
+                .font(.callout)
+                .foregroundColor(.gray)
+                .padding(.top, 1)
+            Text("메모 내용 보여지는 곳")
+                .foregroundColor(.postechRed)
+                .padding(.top, 1)
+
+            Spacer()
         }
     }
 }
