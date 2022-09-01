@@ -23,7 +23,7 @@ extension AppState {
     struct UserData {
         var dormRooms: Loadable<[DormRoom]>
 
-        init(dormRooms: Loadable<[DormRoom]> = .loaded(DormRoom.mockData)) {
+        init(dormRooms: Loadable<[DormRoom]> = .notRequested) {
             self.dormRooms = dormRooms
         }
     }
