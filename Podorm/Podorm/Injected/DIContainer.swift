@@ -17,7 +17,9 @@ struct DIContainer: EnvironmentKey {
 
     static var defaultValue: Self { Self.default }
 
-    private static let `default` = Self(interactors: Interactors())
+    private static let `default` = Self(interactors: Interactors(
+        roomListInteractor: RealRoomListInteractor(roomRepository: FirebaseRoomRepository.shared, appState: AppState())
+    ))
 }
 
 extension EnvironmentValues {

@@ -27,12 +27,11 @@ extension FirebaseRoomRepository: RoomRepository {
 
     }
 
-    func addStudentToRoom(_ studentId: String, to dormRoom: DormRoom) async throws {
+    func addStudentToRoom(_ studentId: Int, to dormRoom: DormRoom) async throws {
 
     }
 
-    func removeStudentFromRoom(_ studentId: String, from dormRoom: DormRoom) async throws {
-        
+    func removeStudentFromRoom(_ studentId: Int, from dormRoom: DormRoom) async throws {
     }
 
     func addRooms(_ dormRooms: [DormRoom]) async throws {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0090816928C05A7E004D057B /* RoomListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0090816828C05A7E004D057B /* RoomListInteractorTests.swift */; };
+		0090817028C0A2BB004D057B /* MockRoomRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0090816F28C0A2BB004D057B /* MockRoomRepository.swift */; };
 		00B3189A28B71A6300B422EF /* PodormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B3189928B71A6300B422EF /* PodormApp.swift */; };
 		00B3189C28B71A6300B422EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B3189B28B71A6300B422EF /* ContentView.swift */; };
 		00B3189E28B71A6500B422EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00B3189D28B71A6500B422EF /* Assets.xcassets */; };
@@ -25,6 +27,7 @@
 		00BBBF3C28B8D57B0070D177 /* RoomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BBBF3B28B8D57B0070D177 /* RoomManager.swift */; };
 		00BBBF3E28B8D5C40070D177 /* RoomGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BBBF3D28B8D5C40070D177 /* RoomGridCell.swift */; };
 		00BBBF4028B8D6490070D177 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BBBF3F28B8D6490070D177 /* MockData.swift */; };
+		00CB3F0A28C0363A006B1536 /* RoomListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CB3F0928C0363A006B1536 /* RoomListInteractor.swift */; };
 		00E3912128BF8CC8009233A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00E3912028BF8CC8009233A0 /* GoogleService-Info.plist */; };
 		00E3912428BF8D61009233A0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 00E3912328BF8D61009233A0 /* FirebaseAuth */; };
 		00E3912628BF8D61009233A0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 00E3912528BF8D61009233A0 /* FirebaseFirestore */; };
@@ -54,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0090816828C05A7E004D057B /* RoomListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListInteractorTests.swift; sourceTree = "<group>"; };
+		0090816F28C0A2BB004D057B /* MockRoomRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRoomRepository.swift; sourceTree = "<group>"; };
 		00B3189628B71A6300B422EF /* Podorm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Podorm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00B3189928B71A6300B422EF /* PodormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodormApp.swift; sourceTree = "<group>"; };
 		00B3189B28B71A6300B422EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +81,7 @@
 		00BBBF3B28B8D57B0070D177 /* RoomManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomManager.swift; sourceTree = "<group>"; };
 		00BBBF3D28B8D5C40070D177 /* RoomGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomGridCell.swift; sourceTree = "<group>"; };
 		00BBBF3F28B8D6490070D177 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		00CB3F0928C0363A006B1536 /* RoomListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListInteractor.swift; sourceTree = "<group>"; };
 		00E3912028BF8CC8009233A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		00E3912B28BF8DE5009233A0 /* PodormTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PodormTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		00E3912C28BF8DE5009233A0 /* RoomRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRepositoryTest.swift; sourceTree = "<group>"; };
@@ -113,6 +119,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0090816428C05A57004D057B /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				0090816828C05A7E004D057B /* RoomListInteractorTests.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		0090816528C05A5A004D057B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				00E3912C28BF8DE5009233A0 /* RoomRepositoryTest.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		0090816E28C0A2A4004D057B /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				0090816F28C0A2BB004D057B /* MockRoomRepository.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		00B3188D28B71A6300B422EF = {
 			isa = PBXGroup;
 			children = (
@@ -161,7 +191,9 @@
 		00B318A928B71A6500B422EF /* PodormTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E3912C28BF8DE5009233A0 /* RoomRepositoryTest.swift */,
+				0090816E28C0A2A4004D057B /* Mock */,
+				0090816528C05A5A004D057B /* Repository */,
+				0090816428C05A57004D057B /* Interactors */,
 				00E3912B28BF8DE5009233A0 /* PodormTests-Bridging-Header.h */,
 			);
 			path = PodormTests;
@@ -253,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				00BBBF2F28B8CEF50070D177 /* Interactors.swift */,
+				00CB3F0928C0363A006B1536 /* RoomListInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -441,6 +474,7 @@
 				00B3189C28B71A6300B422EF /* ContentView.swift in Sources */,
 				00BBBF3428B8D0620070D177 /* Room.swift in Sources */,
 				00BBBF3228B8D0570070D177 /* Student.swift in Sources */,
+				00CB3F0A28C0363A006B1536 /* RoomListInteractor.swift in Sources */,
 				00B3189A28B71A6300B422EF /* PodormApp.swift in Sources */,
 				00BBBF2828B8CE5D0070D177 /* Helpers.swift in Sources */,
 				00BBBF2A28B8CE620070D177 /* Loadable.swift in Sources */,
@@ -455,6 +489,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E3912D28BF8DE5009233A0 /* RoomRepositoryTest.swift in Sources */,
+				0090817028C0A2BB004D057B /* MockRoomRepository.swift in Sources */,
+				0090816928C05A7E004D057B /* RoomListInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
