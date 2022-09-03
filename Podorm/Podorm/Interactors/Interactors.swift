@@ -10,7 +10,11 @@ import Foundation
 extension DIContainer {
 
     struct Interactors {
+        let roomListInteractor: RoomListInteractor
 
+        init(roomListInteractor: RoomListInteractor) {
+            self.roomListInteractor = roomListInteractor
+        }
     }
 
 }
@@ -19,7 +23,9 @@ extension DIContainer {
 #if DEBUG
 extension DIContainer.Interactors {
     static var preview: DIContainer.Interactors {
-        DIContainer.Interactors()
+        DIContainer.Interactors(
+            roomListInteractor: RealRoomListInteractor(roomRepository: FirebaseRoomRepository.shared, appState: AppState.preview)
+        )
     }
 }
 #endif

@@ -10,6 +10,6 @@ protocol RoomRepository {
     func addRoom(_ dormRoom: DormRoom) async throws
     func loadRooms() async throws -> [DormRoom]
     func removeRooms(_ dormRooms: [DormRoom]) async throws
-    func addStudentToRoom(_ studentId: String, to dormRoom: DormRoom) async throws
-    func removeStudentFromRoom(_ studentId: String, from dormRoom: DormRoom) async throws
+    func addStudentToRoom(_ studentId: Int, to dormRoom: DormRoom) async throws
+    func removeStudentFromRoom(_ studentId: Int, from dormRoom: DormRoom) async throws
 }
