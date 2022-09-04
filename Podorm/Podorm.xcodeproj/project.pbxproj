@@ -33,6 +33,7 @@
 		00E3912D28BF8DE5009233A0 /* RoomRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E3912C28BF8DE5009233A0 /* RoomRepositoryTest.swift */; };
 		00E3912F28BF90DC009233A0 /* RoomRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E3912E28BF90DC009233A0 /* RoomRepository.swift */; };
 		00E3913128BF91A2009233A0 /* FirebaseRoomRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E3913028BF91A2009233A0 /* FirebaseRoomRepository.swift */; };
+		2A92EACE28C3975B002DC4CB /* DocumentPickerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A92EACD28C3975B002DC4CB /* DocumentPickerInteractor.swift */; };
 		2AF2F74F28BBD8C100F993DA /* DocumentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2F74E28BBD8C100F993DA /* DocumentPickerView.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		00E3912C28BF8DE5009233A0 /* RoomRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRepositoryTest.swift; sourceTree = "<group>"; };
 		00E3912E28BF90DC009233A0 /* RoomRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRepository.swift; sourceTree = "<group>"; };
 		00E3913028BF91A2009233A0 /* FirebaseRoomRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRoomRepository.swift; sourceTree = "<group>"; };
+		2A92EACD28C3975B002DC4CB /* DocumentPickerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerInteractor.swift; sourceTree = "<group>"; };
 		2AF2F74E28BBD8C100F993DA /* DocumentPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -253,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				00BBBF2F28B8CEF50070D177 /* Interactors.swift */,
+				2A92EACD28C3975B002DC4CB /* DocumentPickerInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				00BBBF4028B8D6490070D177 /* MockData.swift in Sources */,
 				00E3913128BF91A2009233A0 /* FirebaseRoomRepository.swift in Sources */,
 				00BBBF3028B8CEF50070D177 /* Interactors.swift in Sources */,
+				2A92EACE28C3975B002DC4CB /* DocumentPickerInteractor.swift in Sources */,
 				00B3189C28B71A6300B422EF /* ContentView.swift in Sources */,
 				00BBBF3428B8D0620070D177 /* Room.swift in Sources */,
 				00BBBF3228B8D0570070D177 /* Student.swift in Sources */,
@@ -605,7 +609,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Podorm/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = 44RS35G3C5;
+				DEVELOPMENT_TEAM = 25YUTG4RN5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Podorm/Resources/Info.plist;
@@ -635,7 +639,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Podorm/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = 44RS35G3C5;
+				DEVELOPMENT_TEAM = 25YUTG4RN5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Podorm/Resources/Info.plist;
