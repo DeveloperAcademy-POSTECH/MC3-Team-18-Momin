@@ -10,7 +10,11 @@ import Foundation
 extension DIContainer {
 
     struct Interactors {
-
+        let documentPickerInteractor: DocumentPickerInteractor
+        
+        init(documentPickerInteractor: DocumentPickerInteractor) {
+            self.documentPickerInteractor = documentPickerInteractor
+        }
     }
 
 }
@@ -19,7 +23,7 @@ extension DIContainer {
 #if DEBUG
 extension DIContainer.Interactors {
     static var preview: DIContainer.Interactors {
-        DIContainer.Interactors()
+        DIContainer.Interactors(documentPickerInteractor: RealDocumentPickerInteractor())
     }
 }
 #endif
