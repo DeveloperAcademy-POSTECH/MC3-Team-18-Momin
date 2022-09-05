@@ -26,6 +26,9 @@
 		00BBBF3C28B8D57B0070D177 /* RoomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BBBF3B28B8D57B0070D177 /* RoomManager.swift */; };
 		00BBBF3E28B8D5C40070D177 /* RoomGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BBBF3D28B8D5C40070D177 /* RoomGridCell.swift */; };
 		00BBBF4028B8D6490070D177 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BBBF3F28B8D6490070D177 /* MockData.swift */; };
+		211F177F28C5AF5B00DD3F15 /* TempViewForNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211F177E28C5AF5B00DD3F15 /* TempViewForNoteView.swift */; };
+		21693FAC28C1FE0600A14E0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21693FAB28C1FE0600A14E0B /* GoogleService-Info.plist */; };
+		21693FAF28C2006300A14E0B /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21693FAE28C2006300A14E0B /* NotesView.swift */; };
 		2AF2F74F28BBD8C100F993DA /* DocumentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2F74E28BBD8C100F993DA /* DocumentPickerView.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +73,9 @@
 		00BBBF3B28B8D57B0070D177 /* RoomManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomManager.swift; sourceTree = "<group>"; };
 		00BBBF3D28B8D5C40070D177 /* RoomGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomGridCell.swift; sourceTree = "<group>"; };
 		00BBBF3F28B8D6490070D177 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		211F177E28C5AF5B00DD3F15 /* TempViewForNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewForNoteView.swift; sourceTree = "<group>"; };
+		21693FAB28C1FE0600A14E0B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		21693FAE28C2006300A14E0B /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		2AF2F74E28BBD8C100F993DA /* DocumentPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +107,7 @@
 		00B3188D28B71A6300B422EF = {
 			isa = PBXGroup;
 			children = (
+				21693FAB28C1FE0600A14E0B /* GoogleService-Info.plist */,
 				00BBBF3528B8D0C10070D177 /* .swiftlint.yml */,
 				00B3189828B71A6300B422EF /* Podorm */,
 				00B318A928B71A6500B422EF /* PodormTests */,
@@ -188,6 +195,7 @@
 		00B318C628B71C9F00B422EF /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				21693FAD28C2005200A14E0B /* Notes */,
 				00BBBF3828B8D5630070D177 /* RoomManager */,
 				00B3189B28B71A6300B422EF /* ContentView.swift */,
 			);
@@ -246,6 +254,15 @@
 				2AF2F74E28BBD8C100F993DA /* DocumentPickerView.swift */,
 			);
 			path = RoomManager;
+			sourceTree = "<group>";
+		};
+		21693FAD28C2005200A14E0B /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				21693FAE28C2006300A14E0B /* NotesView.swift */,
+				211F177E28C5AF5B00DD3F15 /* TempViewForNoteView.swift */,
+			);
+			path = Notes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00BBBF3628B8D0C10070D177 /* .swiftlint.yml in Resources */,
+				21693FAC28C1FE0600A14E0B /* GoogleService-Info.plist in Resources */,
 				00B318A128B71A6500B422EF /* Preview Assets.xcassets in Resources */,
 				00B3189E28B71A6500B422EF /* Assets.xcassets in Resources */,
 			);
@@ -403,6 +421,7 @@
 			files = (
 				00BBBF3E28B8D5C40070D177 /* RoomGridCell.swift in Sources */,
 				00BBBF2E28B8CEE80070D177 /* DIContainer.swift in Sources */,
+				21693FAF28C2006300A14E0B /* NotesView.swift in Sources */,
 				00BBBF2628B8CE430070D177 /* AppState.swift in Sources */,
 				00BBBF4028B8D6490070D177 /* MockData.swift in Sources */,
 				00BBBF3028B8CEF50070D177 /* Interactors.swift in Sources */,
@@ -413,6 +432,7 @@
 				00BBBF2828B8CE5D0070D177 /* Helpers.swift in Sources */,
 				00BBBF2A28B8CE620070D177 /* Loadable.swift in Sources */,
 				2AF2F74F28BBD8C100F993DA /* DocumentPickerView.swift in Sources */,
+				211F177F28C5AF5B00DD3F15 /* TempViewForNoteView.swift in Sources */,
 				00BBBF3C28B8D57B0070D177 /* RoomManager.swift in Sources */,
 				00BBBF2C28B8CEB50070D177 /* Color.swift in Sources */,
 			);
