@@ -11,7 +11,6 @@
 		00B3189C28B71A6300B422EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B3189B28B71A6300B422EF /* ContentView.swift */; };
 		00B3189E28B71A6500B422EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00B3189D28B71A6500B422EF /* Assets.xcassets */; };
 		00B318A128B71A6500B422EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00B318A028B71A6500B422EF /* Preview Assets.xcassets */; };
-		00B318AB28B71A6500B422EF /* PodormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B318AA28B71A6500B422EF /* PodormTests.swift */; };
 		00B318B528B71A6500B422EF /* PodormUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B318B428B71A6500B422EF /* PodormUITests.swift */; };
 		00B318B728B71A6500B422EF /* PodormUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B318B628B71A6500B422EF /* PodormUITestsLaunchTests.swift */; };
 		00BBBF2628B8CE430070D177 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BBBF2528B8CE430070D177 /* AppState.swift */; };
@@ -29,6 +28,14 @@
 		211F177F28C5AF5B00DD3F15 /* TempViewForNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211F177E28C5AF5B00DD3F15 /* TempViewForNoteView.swift */; };
 		21693FAC28C1FE0600A14E0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21693FAB28C1FE0600A14E0B /* GoogleService-Info.plist */; };
 		21693FAF28C2006300A14E0B /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21693FAE28C2006300A14E0B /* NotesView.swift */; };
+		00E3912128BF8CC8009233A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00E3912028BF8CC8009233A0 /* GoogleService-Info.plist */; };
+		00E3912428BF8D61009233A0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 00E3912328BF8D61009233A0 /* FirebaseAuth */; };
+		00E3912628BF8D61009233A0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 00E3912528BF8D61009233A0 /* FirebaseFirestore */; };
+		00E3912828BF8D61009233A0 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 00E3912728BF8D61009233A0 /* FirebaseFirestoreSwift */; };
+		00E3912A28BF8D61009233A0 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 00E3912928BF8D61009233A0 /* FirebaseStorage */; };
+		00E3912D28BF8DE5009233A0 /* RoomRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E3912C28BF8DE5009233A0 /* RoomRepositoryTest.swift */; };
+		00E3912F28BF90DC009233A0 /* RoomRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E3912E28BF90DC009233A0 /* RoomRepository.swift */; };
+		00E3913128BF91A2009233A0 /* FirebaseRoomRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E3913028BF91A2009233A0 /* FirebaseRoomRepository.swift */; };
 		2AF2F74F28BBD8C100F993DA /* DocumentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2F74E28BBD8C100F993DA /* DocumentPickerView.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +63,6 @@
 		00B3189D28B71A6500B422EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00B318A028B71A6500B422EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		00B318A628B71A6500B422EF /* PodormTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PodormTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		00B318AA28B71A6500B422EF /* PodormTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodormTests.swift; sourceTree = "<group>"; };
 		00B318B028B71A6500B422EF /* PodormUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PodormUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00B318B428B71A6500B422EF /* PodormUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodormUITests.swift; sourceTree = "<group>"; };
 		00B318B628B71A6500B422EF /* PodormUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodormUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -76,6 +82,11 @@
 		211F177E28C5AF5B00DD3F15 /* TempViewForNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewForNoteView.swift; sourceTree = "<group>"; };
 		21693FAB28C1FE0600A14E0B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		21693FAE28C2006300A14E0B /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
+		00E3912028BF8CC8009233A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		00E3912B28BF8DE5009233A0 /* PodormTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PodormTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		00E3912C28BF8DE5009233A0 /* RoomRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRepositoryTest.swift; sourceTree = "<group>"; };
+		00E3912E28BF90DC009233A0 /* RoomRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRepository.swift; sourceTree = "<group>"; };
+		00E3913028BF91A2009233A0 /* FirebaseRoomRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRoomRepository.swift; sourceTree = "<group>"; };
 		2AF2F74E28BBD8C100F993DA /* DocumentPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +95,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00E3912428BF8D61009233A0 /* FirebaseAuth in Frameworks */,
+				00E3912A28BF8D61009233A0 /* FirebaseStorage in Frameworks */,
+				00E3912628BF8D61009233A0 /* FirebaseFirestore in Frameworks */,
+				00E3912828BF8D61009233A0 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				21693FAB28C1FE0600A14E0B /* GoogleService-Info.plist */,
+				00E3912028BF8CC8009233A0 /* GoogleService-Info.plist */,
 				00BBBF3528B8D0C10070D177 /* .swiftlint.yml */,
 				00B3189828B71A6300B422EF /* Podorm */,
 				00B318A928B71A6500B422EF /* PodormTests */,
@@ -152,7 +168,8 @@
 		00B318A928B71A6500B422EF /* PodormTests */ = {
 			isa = PBXGroup;
 			children = (
-				00B318AA28B71A6500B422EF /* PodormTests.swift */,
+				00E3912C28BF8DE5009233A0 /* RoomRepositoryTest.swift */,
+				00E3912B28BF8DE5009233A0 /* PodormTests-Bridging-Header.h */,
 			);
 			path = PodormTests;
 			sourceTree = "<group>";
@@ -215,6 +232,8 @@
 		00B318C928B71CFE00B422EF /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				00E3912E28BF90DC009233A0 /* RoomRepository.swift */,
+				00E3913028BF91A2009233A0 /* FirebaseRoomRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -282,6 +301,12 @@
 			dependencies = (
 			);
 			name = Podorm;
+			packageProductDependencies = (
+				00E3912328BF8D61009233A0 /* FirebaseAuth */,
+				00E3912528BF8D61009233A0 /* FirebaseFirestore */,
+				00E3912728BF8D61009233A0 /* FirebaseFirestoreSwift */,
+				00E3912928BF8D61009233A0 /* FirebaseStorage */,
+			);
 			productName = Podorm;
 			productReference = 00B3189628B71A6300B422EF /* Podorm.app */;
 			productType = "com.apple.product-type.application";
@@ -337,6 +362,7 @@
 					};
 					00B318A528B71A6500B422EF = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1400;
 						TestTargetID = 00B3189528B71A6300B422EF;
 					};
 					00B318AF28B71A6500B422EF = {
@@ -354,6 +380,9 @@
 				Base,
 			);
 			mainGroup = 00B3188D28B71A6300B422EF;
+			packageReferences = (
+				00E3912228BF8D61009233A0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 00B3189728B71A6300B422EF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -372,6 +401,7 @@
 			files = (
 				00BBBF3628B8D0C10070D177 /* .swiftlint.yml in Resources */,
 				21693FAC28C1FE0600A14E0B /* GoogleService-Info.plist in Resources */,
+				00E3912128BF8CC8009233A0 /* GoogleService-Info.plist in Resources */,
 				00B318A128B71A6500B422EF /* Preview Assets.xcassets in Resources */,
 				00B3189E28B71A6500B422EF /* Assets.xcassets in Resources */,
 			);
@@ -423,7 +453,9 @@
 				00BBBF2E28B8CEE80070D177 /* DIContainer.swift in Sources */,
 				21693FAF28C2006300A14E0B /* NotesView.swift in Sources */,
 				00BBBF2628B8CE430070D177 /* AppState.swift in Sources */,
+				00E3912F28BF90DC009233A0 /* RoomRepository.swift in Sources */,
 				00BBBF4028B8D6490070D177 /* MockData.swift in Sources */,
+				00E3913128BF91A2009233A0 /* FirebaseRoomRepository.swift in Sources */,
 				00BBBF3028B8CEF50070D177 /* Interactors.swift in Sources */,
 				00B3189C28B71A6300B422EF /* ContentView.swift in Sources */,
 				00BBBF3428B8D0620070D177 /* Room.swift in Sources */,
@@ -442,7 +474,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00B318AB28B71A6500B422EF /* PodormTests.swift in Sources */,
+				00E3912D28BF8DE5009233A0 /* RoomRepositoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,15 +682,23 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 44RS35G3C5;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = team.momin.PodormTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "PodormTests/PodormTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Podorm.app/Podorm";
@@ -670,15 +710,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 44RS35G3C5;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = team.momin.PodormTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "PodormTests/PodormTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Podorm.app/Podorm";
@@ -761,6 +808,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		00E3912228BF8D61009233A0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		00E3912328BF8D61009233A0 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00E3912228BF8D61009233A0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		00E3912528BF8D61009233A0 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00E3912228BF8D61009233A0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		00E3912728BF8D61009233A0 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00E3912228BF8D61009233A0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		00E3912928BF8D61009233A0 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00E3912228BF8D61009233A0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 00B3188E28B71A6300B422EF /* Project object */;
 }
