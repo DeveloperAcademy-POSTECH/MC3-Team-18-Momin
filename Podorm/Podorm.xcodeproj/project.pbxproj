@@ -28,6 +28,7 @@
 		00BBBF4028B8D6490070D177 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BBBF3F28B8D6490070D177 /* MockData.swift */; };
 		2AF2F74F28BBD8C100F993DA /* DocumentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2F74E28BBD8C100F993DA /* DocumentPickerView.swift */; };
 		C9FAEC3028C9B7E80023D3AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9FAEC2F28C9B7E80023D3AC /* GoogleService-Info.plist */; };
+		C9FAEC3228C9B9E10023D3AC /* RoomDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FAEC3128C9B9E10023D3AC /* RoomDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		00BBBF3F28B8D6490070D177 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		2AF2F74E28BBD8C100F993DA /* DocumentPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerView.swift; sourceTree = "<group>"; };
 		C9FAEC2F28C9B7E80023D3AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C9FAEC3128C9B9E10023D3AC /* RoomDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +249,7 @@
 				00BBBF3B28B8D57B0070D177 /* RoomManager.swift */,
 				00BBBF3D28B8D5C40070D177 /* RoomGridCell.swift */,
 				2AF2F74E28BBD8C100F993DA /* DocumentPickerView.swift */,
+				C9FAEC3128C9B9E10023D3AC /* RoomDetail.swift */,
 			);
 			path = RoomManager;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9FAEC3228C9B9E10023D3AC /* RoomDetail.swift in Sources */,
 				00BBBF3E28B8D5C40070D177 /* RoomGridCell.swift in Sources */,
 				00BBBF2E28B8CEE80070D177 /* DIContainer.swift in Sources */,
 				00BBBF2628B8CE430070D177 /* AppState.swift in Sources */,

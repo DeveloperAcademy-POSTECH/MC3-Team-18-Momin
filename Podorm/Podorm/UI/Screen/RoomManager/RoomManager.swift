@@ -19,14 +19,14 @@ struct RoomManager: View {
         VStack {
             HStack {
                 content()
-                    RoomDetail()
+                RoomDetail()
                 .frame(width: currentSelectedRoom == nil ? 0 : 400)
                 .animation(.easeInOut, value: currentSelectedRoom)
             }
         }
         .onAppear(perform: requestDormRooms)
         .navigationTitle("Dorm manager")
-//        .toolbar(content: toolbarDorm)
+        .toolbar(content: toolbarDorm)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .sheet(isPresented: $showDocumentPicker) {
             DocumentPickerView()
@@ -55,59 +55,6 @@ private extension RoomManager {
             loaded(rooms)
         case .failed(let error):
             errorIndicator(error)
-        }
-    }
-}
-
-// MARK: - Room Detail View
-private extension RoomManager {
-    struct RoomDetail: View {
-        var body: some View {
-            VStack(alignment: .leading) {
-                HStack {
-                    Text("101 A")
-                        .font(.title.bold())
-                    Spacer()
-                    Button("Edit") {
-                        print("Select")
-                    }
-                    .padding(.trailing, 20)
-                }
-                Text("Nick")
-                    .font(.title3.bold())
-                    .padding(.top, 4)
-                Text("국적")
-                    .font(.callout)
-                    .foregroundColor(.gray)
-                    .padding(.top, 1)
-                Text("메모 내용 보여지는 곳")
-                    .foregroundColor(.postechRed)
-                    .padding(.top, 1)
-                
-                Spacer()
-                
-                HStack {
-                    Text("101 A")
-                        .font(.title.bold())
-                    Spacer()
-                    Button("Edit") {
-                        print("Select")
-                    }
-                    .padding(.trailing, 20)
-                }
-                Text("Nick")
-                    .font(.title3.bold())
-                    .padding(.top, 4)
-                Text("국적")
-                    .font(.callout)
-                    .foregroundColor(.gray)
-                    .padding(.top, 1)
-                Text("메모 내용 보여지는 곳")
-                    .foregroundColor(.postechRed)
-                    .padding(.top, 1)
-                
-                Spacer()
-            }
         }
     }
 }
