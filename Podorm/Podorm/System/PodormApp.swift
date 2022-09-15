@@ -5,6 +5,7 @@
 //  Created by JongHo Park on 2022/08/25.
 //
 
+import FirebaseCore
 import SwiftUI
 
 @main
@@ -15,6 +16,7 @@ struct PodormApp: App {
 
     init() {
         self.diContainer = DIContainer(interactors: .init())
+        FirebaseApp.configure()
     }
 
     var body: some Scene {
