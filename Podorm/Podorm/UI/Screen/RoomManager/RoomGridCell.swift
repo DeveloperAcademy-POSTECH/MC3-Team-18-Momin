@@ -11,8 +11,9 @@ struct RoomGridCell: View {
     private let room: DormRoom
     @State private var students: Loadable<[Student]>
     private let selected: Bool
-    private let onClick: () -> Void
-    init(room: DormRoom, selected: Bool = false, students: Loadable<[Student]> = .notRequested, _ onClick: @escaping () -> Void = {}) {
+    private let onClick: ([Student]) -> Void
+
+    init(room: DormRoom, selected: Bool = false, students: Loadable<[Student]> = .notRequested, _ onClick: @escaping ([Student]) -> Void = { _ in }) {
         self.room = room
         self._students = State(initialValue: students)
         self.selected = selected
@@ -104,7 +105,9 @@ private extension RoomGridCell {
             }
         }
         .contentShape(Rectangle())
-        .onTapGesture(perform: onClick)
+        .onTapGesture {
+            onClick(students)
+        }
     }
 
     func studentInfo(_ student: Student) -> some View {
@@ -140,9 +143,7 @@ private extension RoomGridCell {
 struct RoomGridCell_Previews: PreviewProvider {
 
     static func makePreview(_ students: Loadable<[Student]>, selected: Bool = false) -> some View {
-        RoomGridCell(room: DormRoom.mockData.first!, selected: selected, students: students) {
-
-        }
+        RoomGridCell(room: DormRoom.mockData.first!, selected: selected, students: students)
         .padding()
         .previewLayout(.sizeThatFits)
         .previewInterfaceOrientation(.landscapeLeft)

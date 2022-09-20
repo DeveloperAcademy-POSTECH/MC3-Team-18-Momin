@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct RoomDetail: View {
-    private let student: Student
-    @State private var students: Loadable<[Student]>
 
-    init(students: Loadable<[Student]> = .notRequested, student: Student) {
+// 
+struct RoomDetail: View {
+    @State private var students: [Student]
+
+    init(students: [Student]) {
         self._students = State(initialValue: students)
-        self.student = student
     }
 
     var body: some View {
@@ -64,3 +64,11 @@ struct RoomDetail: View {
         }
     }
 }
+
+#if DEBUG
+struct RoomDetail_Previews: PreviewProvider {
+    static var previews: some View {
+        RoomDetail(students: Student.mockData)
+    }
+}
+#endif

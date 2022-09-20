@@ -14,12 +14,13 @@ struct RoomManager: View {
     @State private var floorNumber: DormFloor = .first
     @State private var showDocumentPicker = false
     @State private var currentSelectedRoom: DormRoom?
+    @State private var currentSelectedStudents: [Student] = []
 
     var body: some View {
         VStack {
             HStack {
                 content()
-                RoomDetail()
+                RoomDetail(students: currentSelectedStudents)
                 .frame(width: currentSelectedRoom == nil ? 0 : 400)
                 .animation(.easeInOut, value: currentSelectedRoom)
             }
@@ -136,8 +137,10 @@ private extension RoomManager {
         ScrollView(.vertical) {
             LazyVGrid(columns: lazyColumn, spacing: 60) {
                 ForEach(rooms, id: \.self) { room in
-                    RoomGridCell(room: room, selected: currentSelectedRoom == room) {
+                    RoomGridCell(room: room, selected: currentSelectedRoom == room) { students in
                         onRoomSelected(room)
+                        currentSelectedStudents = students
+
                     }
                 }
             }
