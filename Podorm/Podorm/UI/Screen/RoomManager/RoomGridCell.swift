@@ -13,7 +13,7 @@ struct RoomGridCell: View {
     private let selected: Bool
     private let onClick: ([Student]) -> Void
 
-    init(room: DormRoom, selected: Bool = false, students: Loadable<[Student]> = .notRequested, _ onClick: @escaping ([Student]) -> Void = { _ in }) {
+    init(room: DormRoom, selected: Bool = false, students: Loadable<[Student]> = .loaded(Student.mockData), _ onClick: @escaping ([Student]) -> Void = { _ in }) {
         self.room = room
         self._students = State(initialValue: students)
         self.selected = selected

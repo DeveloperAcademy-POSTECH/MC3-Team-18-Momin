@@ -140,7 +140,6 @@ private extension RoomManager {
                     RoomGridCell(room: room, selected: currentSelectedRoom == room) { students in
                         onRoomSelected(room)
                         currentSelectedStudents = students
-
                     }
                 }
             }
