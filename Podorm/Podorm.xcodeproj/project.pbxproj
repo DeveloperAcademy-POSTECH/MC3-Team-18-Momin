@@ -35,6 +35,8 @@
 		2A92EACE28C3975B002DC4CB /* DocumentPickerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A92EACD28C3975B002DC4CB /* DocumentPickerInteractor.swift */; };
 		2A92EAD228C4951B002DC4CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A92EAD128C4951A002DC4CB /* GoogleService-Info.plist */; };
 		2AF2F74F28BBD8C100F993DA /* DocumentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2F74E28BBD8C100F993DA /* DocumentPickerView.swift */; };
+		C905656E28F6AB4C005B4CB0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C905656D28F6AB4C005B4CB0 /* GoogleService-Info.plist */; };
+		C9FAEC3228C9B9E10023D3AC /* RoomDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FAEC3128C9B9E10023D3AC /* RoomDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		2A92EACD28C3975B002DC4CB /* DocumentPickerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerInteractor.swift; sourceTree = "<group>"; };
 		2A92EAD128C4951A002DC4CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Podorm/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2AF2F74E28BBD8C100F993DA /* DocumentPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerView.swift; sourceTree = "<group>"; };
+		C905656D28F6AB4C005B4CB0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../dorm/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C9FAEC3128C9B9E10023D3AC /* RoomDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +270,7 @@
 				00BBBF3B28B8D57B0070D177 /* RoomManager.swift */,
 				00BBBF3D28B8D5C40070D177 /* RoomGridCell.swift */,
 				2AF2F74E28BBD8C100F993DA /* DocumentPickerView.swift */,
+				C9FAEC3128C9B9E10023D3AC /* RoomDetail.swift */,
 			);
 			path = RoomManager;
 			sourceTree = "<group>";
@@ -434,6 +439,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9FAEC3228C9B9E10023D3AC /* RoomDetail.swift in Sources */,
 				00BBBF3E28B8D5C40070D177 /* RoomGridCell.swift in Sources */,
 				00BBBF2E28B8CEE80070D177 /* DIContainer.swift in Sources */,
 				00BBBF2628B8CE430070D177 /* AppState.swift in Sources */,
