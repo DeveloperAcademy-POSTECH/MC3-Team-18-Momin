@@ -35,31 +35,36 @@ struct NotesView: View {
                 maxHeight: .infinity,
                 alignment: .topLeading
             )
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {
-                        showNotesView = false
-                    }, label: {
-                        HStack {
-                            Image(systemName: "chevron.left")
-                            Text("Dorm Manager")
-                        }
-                        .foregroundColor(.postechRed)
-                    })
-                }
-                ToolbarItem(placement: .principal) {
-                    Text("\(studentInfo.roomNumber)")
-                }
-                ToolbarItem(placement: .automatic) {
-                    Button(action: {
-                        // TODO: 파이어베이스에 저장
-                    }, label: {
-                        Text("Save")
-                            .foregroundColor(.postechRed)
-                    })
-                }
-            }
+            .toolbar(content: toolbarNotes)
             .navigationBarTitle("", displayMode: .inline)
+        }
+    }
+}
+
+private extension NotesView {
+    @ToolbarContentBuilder
+    func toolbarNotes() -> some ToolbarContent {
+        ToolbarItem(placement: .navigationBarLeading) {
+            Button(action: {
+                showNotesView = false
+            }, label: {
+                HStack {
+                    Image(systemName: "chevron.left")
+                    Text("Dorm Manager")
+                }
+                .foregroundColor(.postechRed)
+            })
+        }
+        ToolbarItem(placement: .principal) {
+            Text("\(studentInfo.roomNumber)")
+        }
+        ToolbarItem(placement: .automatic) {
+            Button(action: {
+                // TODO: 파이어베이스에 저장
+            }, label: {
+                Text("Save")
+                    .foregroundColor(.postechRed)
+            })
         }
     }
 }
