@@ -14,15 +14,14 @@ struct RoomManager: View {
     @State private var floorNumber: DormFloor = .first
     @State private var showDocumentPicker = false
     @State private var currentSelectedRoom: DormRoom?
-    @State private var currentSelectedStudents: [Student] = []
+    @State private var currentSelectedStudents: [Student] = [Student(20220101, "Fred", nil, 103, 1), Student(20220101, "Steve", nil, 106, 1)]
 
     var body: some View {
         VStack {
             HStack {
                 content()
-                RoomDetail(students: currentSelectedStudents)
+                RoomDetail(students: currentSelectedStudents, dormRoom: currentSelectedRoom)
                 .frame(width: currentSelectedRoom == nil ? 0 : 400)
-                .animation(.easeInOut, value: currentSelectedRoom)
             }
         }
         .onAppear(perform: requestDormRooms)
@@ -145,7 +144,6 @@ private extension RoomManager {
             }
             .padding(30)
         }
-        .animation(.easeInOut, value: currentSelectedRoom)
         .frame(maxWidth: .infinity)
     }
 
