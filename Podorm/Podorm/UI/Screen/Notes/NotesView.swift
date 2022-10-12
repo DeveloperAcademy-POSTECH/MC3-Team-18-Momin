@@ -14,14 +14,6 @@ struct NotesView: View {
     init(showNotesView: Binding<Bool>, studentInfo: Binding<Student>) {
         self._showNotesView = showNotesView
         self._studentInfo = studentInfo
-
-        let coloredAppearance = UINavigationBarAppearance()
-          coloredAppearance.configureWithOpaqueBackground()
-        coloredAppearance.backgroundColor = UIColor.systemGray6
-          coloredAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-          UINavigationBar.appearance().standardAppearance = coloredAppearance
-          UINavigationBar.appearance().compactAppearance = coloredAppearance
-          UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
     }
 
     var body: some View {
