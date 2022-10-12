@@ -15,7 +15,7 @@ struct PodormApp: App {
     private let diContainer: DIContainer
 
     init() {
-        self.diContainer = DIContainer(interactors: .init())
+        self.diContainer = DIContainer(interactors: .init(documentPickerInteractor: RealDocumentPickerInteractor()))
         FirebaseApp.configure()
     }
 
