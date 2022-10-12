@@ -34,7 +34,6 @@
 		00E3913128BF91A2009233A0 /* FirebaseRoomRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E3913028BF91A2009233A0 /* FirebaseRoomRepository.swift */; };
 		211F177F28C5AF5B00DD3F15 /* TempViewForNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211F177E28C5AF5B00DD3F15 /* TempViewForNoteView.swift */; };
 		21693FAF28C2006300A14E0B /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21693FAE28C2006300A14E0B /* NotesView.swift */; };
-		2171981928F6AD5600EC30B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2171981828F6AD5600EC30B5 /* GoogleService-Info.plist */; };
 		2AF2F74F28BBD8C100F993DA /* DocumentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2F74E28BBD8C100F993DA /* DocumentPickerView.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,7 +83,6 @@
 		00E3913028BF91A2009233A0 /* FirebaseRoomRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRoomRepository.swift; sourceTree = "<group>"; };
 		211F177E28C5AF5B00DD3F15 /* TempViewForNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewForNoteView.swift; sourceTree = "<group>"; };
 		21693FAE28C2006300A14E0B /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
-		2171981828F6AD5600EC30B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2AF2F74E28BBD8C100F993DA /* DocumentPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,7 +118,6 @@
 		00B3188D28B71A6300B422EF = {
 			isa = PBXGroup;
 			children = (
-				2171981828F6AD5600EC30B5 /* GoogleService-Info.plist */,
 				00BBBF3528B8D0C10070D177 /* .swiftlint.yml */,
 				00B3189828B71A6300B422EF /* Podorm */,
 				00B318A928B71A6500B422EF /* PodormTests */,
@@ -397,7 +394,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				00BBBF3628B8D0C10070D177 /* .swiftlint.yml in Resources */,
-				2171981928F6AD5600EC30B5 /* GoogleService-Info.plist in Resources */,
 				00B318A128B71A6500B422EF /* Preview Assets.xcassets in Resources */,
 				00B3189E28B71A6500B422EF /* Assets.xcassets in Resources */,
 			);
