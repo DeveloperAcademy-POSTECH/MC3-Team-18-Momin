@@ -14,6 +14,7 @@ struct Student: Codable {
     let nickname: String? // 학생 닉네임
     let roomNumber: Int // 거주하는 방 호수
     let state: Int // 현재 거주 상태
+    let notes: String? // 학생 관련 메모
 
     /// Student initializer
     /// - Parameters:
@@ -22,12 +23,13 @@ struct Student: Codable {
     ///   - nickname: 학생 닉네임 (이름이 너무 길면 사용자가 단축가능)
     ///   - roomNumber: 거주하는 방 호수
     ///   - state: 현재 체크인 상태
-    init(_ id: Int, _ name: String, _ nickname: String?, _ roomNumber: Int, _ state: Int) {
+    init(_ id: Int, _ name: String, _ nickname: String?, _ roomNumber: Int, _ state: Int, _ notes: String) {
         self.id = id
         self.name = name
         self.nickname = nickname
         self.roomNumber = roomNumber
         self.state = state
+        self.notes = notes
     }
 }
 

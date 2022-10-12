@@ -8,8 +8,8 @@
 #if DEBUG
 extension Student {
     static var mockData: [Student] = [
-        Student(2015112224, "Nick", nil, 101, 0),
-        Student(2015112224, "Jim", nil, 101, 0)
+        Student(2015112224, "Nick", nil, 101, 0, ""),
+        Student(2015112224, "Jim", nil, 101, 0, "")
     ]
 }
 

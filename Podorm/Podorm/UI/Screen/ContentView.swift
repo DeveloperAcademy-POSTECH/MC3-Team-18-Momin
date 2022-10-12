@@ -16,6 +16,13 @@ struct ContentView: View {
 
     init(isRunningTests: Bool = ProcessInfo.processInfo.isRunningTests) {
         self.isRunningTests = isRunningTests
+        let coloredAppearance = UINavigationBarAppearance()
+          coloredAppearance.configureWithOpaqueBackground()
+        coloredAppearance.backgroundColor = UIColor.systemGray6
+          coloredAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+          UINavigationBar.appearance().standardAppearance = coloredAppearance
+          UINavigationBar.appearance().compactAppearance = coloredAppearance
+          UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
     }
 
     var body: some View {
